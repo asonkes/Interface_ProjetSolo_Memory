@@ -20,12 +20,12 @@ let tabEasy = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6];
 console.log(tabEasy);
 
 /** On va initialiser le type de tableau pour le mode medium */
-let tabMedium = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10];
+let tabMedium = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10, 11, 11, 12, 12];
 
 /** On va initialiser le type de tableau pour le mode difficile */
 let tabHard = [
   1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10, 11, 11, 12, 12,
-  13, 13, 14, 14, 15, 15, 16, 16,
+  13, 13, 14, 14, 15, 15, 16, 16, 17, 17, 18, 18
 ];
 
 /** Evenement au click sur le bouton 'EASY' */
@@ -119,16 +119,14 @@ function mixCards(array) {
   /** Ici on détermine la longueur du tableau */
   let index = array.length;
 
-  /** Il reste des éléments à réorganiser */
-  /** Je crois que tant qu'on est pas arrivé à l'indice 0 */
+  /** Tant qu'on est pas arrivé à l'index '0', on mélange */
   while (index != 0) {
-    /** On choisit un élément restant */
-    /** Je crois qu'on leur donne une nombre aléatoire, donc on change leur index */
+    /** On crée des nombres aléatoires entre 0 et 11 */
     let random = Math.floor(Math.random() * index);
     index--;
 
-    /** Et l'échanger avec l'élément actuel */
-    /** A voir si j'ai bien compris */
+    /** On échange les valeurs */
+    /** Ex: random[7], index[11], on va chercher valeur dans la 7eme position et la mettre à la 11eme */
     [array[index], array[random]] = [array[random], array[index]];
   }
 }
