@@ -1,7 +1,7 @@
 {
   "cards": [
     {
-      "id": 1,
+      "id": 0,
       "nom": "Capitaine Turbo",
       "categorie": "patPatrouille",
       "image": "./images/cards/patPatrouille/capt_turbo.png",
@@ -17,7 +17,7 @@
       "regime": null
     },
     {
-      "id": 2,
+      "id": 1,
       "nom": "Chase",
       "categorie": "patPatrouille",
       "image": "./images/cards/patPatrouille/chase.png",
@@ -33,7 +33,7 @@
       "regime": null
     },
     {
-      "id": 3,
+      "id": 2,
       "nom": "Everest",
       "categorie": "patPatrouille",
       "image": "./images/cards/patPatrouille/everest.png",
@@ -49,7 +49,7 @@
       "regime": null
     },
     {
-      "id": 4,
+      "id": 3,
       "nom": "La fermière Rumi",
       "categorie": "patPatrouille",
       "image": "./images/cards/patPatrouille/fermiere_rumi.png",
@@ -65,7 +65,7 @@
       "regime": null
     },
     {
-      "id": 5,
+      "id": 4,
       "nom": "Jake",
       "categorie": "patPatrouille",
       "image": "./images/cards/patPatrouille/jake.png",
@@ -81,7 +81,7 @@
       "regime": null
     },
     {
-      "id": 6,
+      "id": 5,
       "nom": "Mr Le Maire Hollinger",
       "categorie": "patPatrouille",
       "image": "./images/cards/patPatrouille/m_le_maire_hollinger.png",
@@ -97,7 +97,7 @@
       "regime": null
     },
     {
-      "id": 7,
+      "id": 6,
       "nom": "Marcus",
       "categorie": "patPatrouille",
       "image": "./images/cards/patPatrouille/marcus.png",
@@ -113,7 +113,7 @@
       "regime": null
     },
     {
-      "id": 8,
+      "id": 7,
       "nom": "Maurice",
       "categorie": "patPatrouille",
       "image": "./images/cards/patPatrouille/maurice.png",
@@ -129,7 +129,7 @@
       "regime": null
     },
     {
-      "id": 9,
+      "id": 8,
       "nom": "Mme La Maire Goodway",
       "categorie": "patPatrouille",
       "image": "./images/cards/patPatrouille/mme_la_maire_goodway.png",
@@ -145,7 +145,7 @@
       "regime": null
     },
     {
-      "id": 10,
+      "id": 9,
       "nom": "Galinetta",
       "categorie": "patPatrouille",
       "image": "./images/cards/patPatrouille/poule_galinetta.png",
@@ -161,7 +161,7 @@
       "regime": null
     },
     {
-      "id": 11,
+      "id": 10,
       "nom": "Rex",
       "categorie": "patPatrouille",
       "image": "./images/cards/patPatrouille/rex.png",
@@ -177,7 +177,7 @@
       "regime": null
     },
     {
-      "id": 12,
+      "id": 11,
       "nom": "Chien Robot",
       "categorie": "patPatrouille",
       "image": "./images/cards/patPatrouille/robot.png",
@@ -193,7 +193,7 @@
       "regime": null
     },
     {
-      "id": 13,
+      "id": 12,
       "nom": "Rocky",
       "categorie": "patPatrouille",
       "image": "./images/cards/patPatrouille/rocky.png",
@@ -209,7 +209,7 @@
       "regime": null
     },
     {
-      "id": 14,
+      "id": 13,
       "nom": "Romy",
       "categorie": "patPatrouille",
       "image": "./images/cards/patPatrouille/romy.png",
@@ -225,7 +225,7 @@
       "regime": null
     },
     {
-      "id": 15,
+      "id": 14,
       "nom": "Ruben",
       "categorie": "patPatrouille",
       "image": "./images/cards/patPatrouille/ruben.png",
@@ -241,7 +241,7 @@
       "regime": null
     },
     {
-      "id": 16,
+      "id": 15,
       "nom": "Ryder",
       "categorie": "patPatrouille",
       "image": "./images/cards/patPatrouille/ryder.png",
@@ -257,7 +257,7 @@
       "regime": null
     },
     {
-      "id": 17,
+      "id": 16,
       "nom": "Stella",
       "categorie": "patPatrouille",
       "image": "./images/cards/patPatrouille/stella.png",
@@ -273,7 +273,7 @@
       "regime": null
     },
     {
-      "id": 18,
+      "id": 17,
       "nom": "Zuma",
       "categorie": "patPatrouille",
       "image": "./images/cards/patPatrouille/zuma.png",
@@ -289,7 +289,7 @@
       "regime": null
     }, 
     {
-    "id": 19,
+    "id": 18,
     "nom": "Alicia",
     "categorie": "dora",
     "image": "./images/cards/dora/alicia.png",
@@ -305,7 +305,7 @@
     "regime": null
   },
   {
-    "id": 20,
+    "id": 19,
     "nom": "Babouche",
     "categorie": "dora",
     "image": "./images/cards/dora/babouche.png",
@@ -321,7 +321,7 @@
     "regime": null
   },
   {
-    "id": 21,
+    "id": 20,
     "nom": "Bebe Jaguar",
     "categorie": "dora",
     "image": "./images/cards/dora/bebe-jaguar.png",
@@ -337,7 +337,7 @@
     "regime": null
   },
   {
-    "id": 22,
+    "id": 21,
     "nom": "Chipeur",
     "categorie": "dora",
     "image": "./images/cards/dora/chipeur.png",
@@ -353,7 +353,7 @@
     "regime": null
   },
   {
-    "id": 23,
+    "id": 22,
     "nom": "Diego",
     "categorie": "dora",
     "image": "./images/cards/dora/diego.png",
@@ -369,7 +369,7 @@
     "regime": null
   },
   {
-    "id": 24,
+    "id": 23,
     "nom": "Dora",
     "categorie": "dora",
     "image": "./images/cards/dora/dora.png",
@@ -385,7 +385,7 @@
     "regime": null
   },
   {
-    "id": 25,
+    "id": 24,
     "nom": "Grandma",
     "categorie": "dora",
     "image": "./images/cards/dora/grandma.png",
@@ -401,7 +401,7 @@
     "regime": null
   },
   {
-    "id": 26,
+    "id": 25,
     "nom": "La Carte",
     "categorie": "dora",
     "image": "./images/cards/dora/la-carte.png",
@@ -417,7 +417,7 @@
     "regime": null
   },
   {
-    "id": 27,
+    "id": 26,
     "nom": "Le Grand Poulet Rouge",
     "categorie": "dora",
     "image": "./images/cards/dora/le-grand-poulet-rouge.png",
@@ -433,7 +433,7 @@
     "regime": null
   },
   {
-    "id": 28,
+    "id": 27,
     "nom": "Le Train Bleu",
     "categorie": "dora",
     "image": "./images/cards/dora/le-train-bleu.png",
@@ -449,7 +449,7 @@
     "regime": null
   },
   {
-    "id": 29,
+    "id": 28,
     "nom": "Le Trio Fiesta",
     "categorie": "dora",
     "image": "./images/cards/dora/le-trio-fiesta.png",
@@ -465,7 +465,7 @@
     "regime": null
   },
   {
-    "id": 30,
+    "id": 29,
     "nom": "Les Etoiles",
     "categorie": "dora",
     "image": "./images/cards/dora/les-etoiles.png",
@@ -481,7 +481,7 @@
     "regime": null
   },
   {
-    "id": 31,
+    "id": 30,
     "nom": "Le Lutin Grognon",
     "categorie": "dora",
     "image": "./images/cards/dora/lutin-grognon.png",
@@ -497,7 +497,7 @@
     "regime": null
   },
   {
-    "id": 32,
+    "id": 31,
     "nom": "Mister Toucan",
     "categorie": "dora",
     "image": "./images/cards/dora/mister-toucan.png",
@@ -513,7 +513,7 @@
     "regime": null
   },
   {
-    "id": 33,
+    "id": 32,
     "nom": "Sac à Dos",
     "categorie": "dora",
     "image": "./images/cards/dora/sac-a-dos.png",
@@ -529,7 +529,7 @@
     "regime": null
   },
   {
-    "id": 34,
+    "id": 33,
     "nom": "Tico",
     "categorie": "dora",
     "image": "./images/cards/dora/tico.png",
@@ -545,7 +545,7 @@
     "regime": null
   },
   {
-    "id": 35,
+    "id": 34,
     "nom": "Totor",
     "categorie": "dora",
     "image": "./images/cards/dora/totor.png",
@@ -561,7 +561,7 @@
     "regime": null
   },
   {
-    "id": 36,
+    "id": 35,
     "nom": "Vera",
     "categorie": "dora",
     "image": "./images/cards/dora/vera.png",
@@ -577,7 +577,7 @@
     "regime": null
   },
   {
-    "id": 37,
+    "id": 36,
     "nom": "Allosaurus",
     "categorie": "dinosaures",
     "image": "./images/cards/dinosaures/allosaurus.png",
@@ -593,7 +593,7 @@
     "regime": "carnivore"
   },
     {
-    "id": 38,
+    "id": 37,
     "nom": "Ankylosaurus",
     "categorie": "dinosaures",
     "image": "./images/cards/dinosaures/ankylosaurus.png",
@@ -609,7 +609,7 @@
     "regime": "Herbivore"
   },
     {
-    "id": 39,
+    "id": 38,
     "nom": "Apatosaurus",
     "categorie": "dinosaures",
     "image": "./images/cards/dinosaures/apatosaurus.png",
@@ -625,7 +625,7 @@
     "regime": "Herbivore"
   },
   {
-    "id": 40,
+    "id": 39,
      "nom": "Archaeopteryx",
     "categorie": "dinosaures",
     "image": "./images/cards/dinosaures/archaeopteryx.png",
@@ -641,7 +641,7 @@
     "regime": "Carnivore (petits animaux et insectes)"
   },
   {
-    "id": 41,
+    "id": 40,
     "nom": "Brachiosaurus",
     "categorie": "dinosaures",
     "image": "./images/cards/dinosaures/brachiosaurus.png",
@@ -657,7 +657,7 @@
     "regime": "Herbivore"
   },
     {
-    "id": 42,
+    "id": 41,
     "nom": "Dakosaurus",
     "categorie": "dinosaures",
     "image": "./images/cards/dinosaures/dakosaurus.png",
@@ -673,7 +673,7 @@
     "regime": "Carnivore (poissons, autres reptiles marins)"
   },
     {
-    "id": 43,
+    "id": 42,
     "nom": "Dilophosaurus",
     "categorie": "dinosaures",
     "image": "./images/cards/dinosaures/dilophosaurus.png",
@@ -689,7 +689,7 @@
     "regime": "Carnivore"
   },
   {
-    "id": 44,
+    "id": 43,
     "nom": "Liopleurodon",
     "categorie": "dinosaures",
     "image": "./images/cards/dinosaures/liopleurodon.png",
@@ -705,7 +705,7 @@
     "regime": "Carnivore (poissons, reptiles marins)"
   },
     {
-    "id": 45,
+    "id": 44,
     "nom": "Metriohynchus",
     "categorie": "dinosaures",
     "image": "./images/cards/dinosaures/metriohynchus.png",
@@ -721,7 +721,7 @@
     "regime": "Carnivore (poissons, céphalopodes)"
   },
     {
-    "id": 46,
+    "id": 45,
     "nom": "Parasaurolophus",
     "categorie": "dinosaures",
     "image": "./images/cards/dinosaures/parasaurolophus.png",
@@ -737,7 +737,7 @@
     "regime": "Herbivore"
   },
   {
-    "id": 47,
+    "id": 46,
     "nom": "Plesiosaurus",
     "categorie": "dinosaures",
     "image": "./images/cards/dinosaures/plesiosaurus.png",
@@ -753,7 +753,7 @@
     "regime": "Carnivore (poissons et ammonites)"
   },
     {
-    "id": 48,
+    "id": 47,
     "nom": "Pterosaur",
     "categorie": "dinosaures",
     "image": "./images/cards/dinosaures/pterosaur.png",
@@ -769,7 +769,7 @@
     "regime": "Carnivore (poissons, petits animaux)"
   },
     {
-    "id": 49,
+    "id": 48,
     "nom": "Rhamphorynchus",
     "categorie": "dinosaures",
     "image": "./images/cards/dinosaures/rhamphorynchus.png",
@@ -785,7 +785,7 @@
     "regime": "Carnivore (poissons et petits animaux)"
   },
     {
-    "id": 50,
+    "id": 49,
     "nom": "Spinosaurus",
     "categorie": "dinosaures",
     "image": "./images/cards/dinosaures/spinosaurus.png",
@@ -801,7 +801,7 @@
     "regime": "Carnivore (poissons et animaux terrestres)"
   },
     {
-    "id": 51,
+    "id": 50,
     "nom": "Stegosaurus",
     "categorie": "dinosaures",
     "image": "./images/cards/dinosaures/stegosaurus.png",
@@ -817,7 +817,7 @@
     "regime": "Herbivore"
   },
     {
-    "id": 52,
+    "id": 51,
     "nom": "Tyrannosaurus Rex",
     "categorie": "dinosaures",
     "image": "./images/cards/dinosaures/t-rex.png",
@@ -833,7 +833,7 @@
     "regime": "Carnivore"
   },
     {
-    "id": 53,
+    "id": 52,
     "nom": "Triceratops",
     "categorie": "dinosaures",
     "image": "./images/cards/dinosaures/triceratops.png",
@@ -849,7 +849,7 @@
     "regime": "Herbivore"
   },
   {
-    "id": 54,    
+    "id": 53,    
     "nom": "Velociraptor",
     "categorie": "dinosaures",
     "image": "./images/cards/dinosaures/velociraptors.png",
