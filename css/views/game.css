@@ -1,0 +1,128 @@
+.body_game {
+  max-width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: red;
+
+  main {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    background-color: darksalmon;
+
+    .chooseMode {
+      width: 80%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      border: 4px solid blue;
+
+      &.active {
+        display: none;
+      }
+
+      #easy,
+      #medium,
+      #hard {
+        width: 200px;
+        margin: 0 20px;
+        padding: 15px;
+        border-radius: 15px;
+        border: none;
+        border: 1px solid black;
+      }
+
+      #easy {
+        background-color: aqua;
+      }
+
+      #medium {
+        background-color: coral;
+      }
+
+      #hard {
+        background-color: deeppink;
+      }
+    }
+
+    .container {
+      height: 0;
+      opacity: 0;
+
+      &.active {
+        position: relative;
+        width: 90%;
+        height: 100%;
+        opacity: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      ul {
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        margin: 60px 0;
+        list-style: none;
+        gap: 2rem;
+        border: 4px solid blue;
+
+        li {
+          width: 200px;
+          height: 200px;
+          border: 4px solid green;
+
+          &.active {
+            position: absolute;
+            width: 250px;
+            height: 200px;
+            border: 4px solid green;
+          }
+
+          span {
+            display: block;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 22px;
+            border: 4px solid orange;
+          }
+        }
+      }
+
+      button {
+        height: 0;
+        opacity: 0;
+
+        &.active {
+          position: absolute;
+          width: 200px;
+          height: 65px;
+          opacity: 1;
+          border: none;
+          border-radius: 25px;
+          background-color: black;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+          color: white;
+          cursor: pointer;
+
+          &:hover {
+            background-color: brown;
+          }
+        }
+      }
+    }
+  }
+}

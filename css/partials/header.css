@@ -1,0 +1,134 @@
+header {
+  width: var(--width_full);
+  background-color: var(--color_primary);
+  position: fixed;
+  padding: 5px 0;
+  z-index: 999999;
+
+  .logo {
+    width: 3.125rem;
+
+    img {
+      max-width: var(--width_full);
+      width: var(--width_full);
+    }
+  }
+
+  nav {
+    @media (max-width: 959px) {
+      height: 0;
+      opacity: 0;
+
+      &.active {
+        opacity: 1;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: var(--width_reg);
+        height: calc(100vh - 98px);
+        background-color: var(--color_primary);
+        transition: all 1s ease-in-out;
+      }
+    }
+
+    @media (max-width: 700px) {
+      width: var(--width_medium);
+    }
+
+    @media (max-width: 500px) {
+      width: var(--width_full);
+    }
+
+    ul {
+      list-style: none;
+
+      @media (max-width: 959px) {
+        width: var(--width_full);
+        height: var(--height_full);
+        flex-direction: column;
+      }
+
+      li {
+        width: 100%;
+        padding: 5px 15px;
+
+        &:hover {
+          background-color: var(--color_tertiary);
+        }
+
+        @media (max-width: 959px) {
+          width: var(--width_full);
+          border: 1px solid white;
+        }
+
+        a {
+          max-width: var(--width_full);
+          color: var(--color_secondary);
+          text-decoration: none;
+
+          @media (max-width: 959px) {
+            padding: var(--padding_s);
+          }
+
+          span,
+          i {
+            @media (max-width: 959px) {
+              padding: var(--padding_xs);
+            }
+          }
+
+          span {
+            font-family: var(--font_primary);
+            font-size: var(--fontSize_xs);
+
+            padding: 5px;
+          }
+        }
+      }
+    }
+  }
+
+  .burger_icon {
+    display: none;
+
+    @media (max-width: 959px) {
+      display: block;
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      width: 35px;
+      height: 35px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      cursor: pointer;
+    }
+
+    span {
+      display: block;
+      width: var(--width_full);
+      height: 4px;
+      border-radius: 2px;
+      background-color: var(--color_secondary);
+      transition: all 0.5s ease;
+    }
+
+    #span1 {
+      &.active {
+        transform: rotate(45deg) translate(8px, 8px);
+      }
+    }
+
+    #span2 {
+      &.active {
+        opacity: 0;
+      }
+    }
+
+    #span3 {
+      &.active {
+        transform: rotate(-45deg) translate(8px, -8px);
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+footer {
+  max-width: var(--width_full);
+  background-color: var(--color_primary);
+
+  p {
+    padding: var(--padding_s);
+    color: var(--color_secondary);
+    font-family: var(--font_primary);
+    font-size: var(--fontSize_xs);
+  }
+}

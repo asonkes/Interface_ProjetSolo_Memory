@@ -1,3 +1,18 @@
+/* import de la page des variables */
+@import "./variables/variables.css";
+
+/* import de la page du header */
+@import "./partials/header.css";
+
+/* import de la page du footer */
+@import "./partials/footer.css";
+
+/* import de la page home */
+@import "./views/home.css";
+
+/* import de la page game */
+@import "./views/game.css";
+
 * {
   margin: 0;
   padding: 0;
@@ -5,152 +20,42 @@
 }
 
 body {
-  max-width: 100%;
-  min-height: 100vh;
+  max-width: var(--width_full);
+  min-height: var(--heightVH);
+}
+
+main {
+  max-width: var(--width_full);
+  min-height: var(--heightVH);
+  flex-grow: 1;
+}
+
+.container {
+  max-width: 1280px;
+  width: 90%;
+  margin: auto;
+}
+
+.flex {
   display: flex;
+}
+
+.flex_center {
+  justify-content: center;
+}
+
+.flex_between {
+  justify-content: space-between;
+}
+
+.align_center {
+  align-items: center;
+}
+
+.direction_column {
   flex-direction: column;
-  background-color: red;
+}
 
-  header {
-    max-width: 100%;
-    background-color: fuchsia;
-
-    p {
-      text-align: center;
-      padding: 20px;
-    }
-  }
-
-  main {
-    max-width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-grow: 1;
-    background-color: darksalmon;
-    border: 4px solid blue;
-
-    .chooseMode {
-      width: 80%;
-      display: flex;
-      flex-grow: 1;
-      justify-content: center;
-      align-items: center;
-      padding: 20px;
-      border: 4px solid blue;
-
-      &.active {
-        display: none;
-      }
-
-      #easy,
-      #medium,
-      #hard {
-        width: 200px;
-        margin: 0 20px;
-        padding: 15px;
-        border-radius: 15px;
-        border: none;
-        border: 1px solid black;
-      }
-
-      #easy {
-        background-color: aqua;
-      }
-
-      #medium {
-        background-color: coral;
-      }
-
-      #hard {
-        background-color: deeppink;
-      }
-    }
-
-    .container {
-      height: 0;
-      opacity: 0;
-
-      &.active {
-        position: relative;
-        width: 90%;
-        height: 100%;
-        opacity: 1;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-      }
-
-      ul {
-        position: relative;
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
-        margin: 60px 0;
-        list-style: none;
-        gap: 2rem;
-        border: 4px solid blue;
-
-        li {
-          width: 200px;
-          height: 200px;
-          border: 4px solid green;
-
-          &.active {
-            position: absolute;
-            width: 250px;
-            height: 200px;
-            border: 4px solid green;
-          }
-
-          span {
-            display: block;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 22px;
-            border: 4px solid orange;
-          }
-        }
-      }
-
-      button {
-        height: 0;
-        opacity: 0;
-
-        &.active {
-          position: absolute;
-          width: 200px;
-          height: 65px;
-          opacity: 1;
-          border: none;
-          border-radius: 25px;
-          background-color: black;
-          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-          color: white;
-          cursor: pointer;
-
-          &:hover {
-            background-color: brown;
-          }
-        }
-      }
-    }
-  }
-
-  footer {
-    max-width: 100%;
-    background-color: chartreuse;
-
-    p {
-      text-align: center;
-      padding: 20px;
-    }
-  }
+.text_center {
+  text-align: center;
 }
