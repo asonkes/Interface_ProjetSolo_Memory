@@ -6,7 +6,7 @@
 
   .home_image {
     max-width: var(--width_full);
-    height: 540px;
+    height: 450px;
     background-image: url("/images/background/site/background.avif");
     background-repeat: no-repeat;
     background-size: cover;
@@ -15,7 +15,7 @@
 
   .home_title {
     width: fit-content;
-    height: 540px;
+    height: 450px;
     margin: auto;
     padding: 0 20px;
 

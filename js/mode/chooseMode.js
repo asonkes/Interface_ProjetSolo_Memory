@@ -1,4 +1,4 @@
-/** On va initialiser les 3 boutons différents pour le mode du jeu */
+/** On va initialiser les 3 boutons différents pour le mode du jeu */ 
 const chooseMode = document.querySelector(".chooseMode");
 const buttonEasy = document.getElementById("easy");
 const buttonMedium = document.getElementById("medium");

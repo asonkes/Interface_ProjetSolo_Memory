@@ -1,21 +1,24 @@
-.body_game {
-  max-width: 100%;
-  min-height: 100vh;
+#main_game {
+  max-width: var(--width_full);
+  min-height: var(--heightVH);
   display: flex;
   flex-direction: column;
-  background-color: red;
+  justify-content: center;
+  background-color: darksalmon;
+  border: 4px solid red;
 
-  main {
+  .section_game {
     max-width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-grow: 1;
-    background-color: darksalmon;
+    border: 4px solid blue;
+
+    h1 {
+      text-align: center;
+      padding: 40px;
+    }
 
     .chooseMode {
       width: 80%;
+      margin: auto;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -35,6 +38,7 @@
         border-radius: 15px;
         border: none;
         border: 1px solid black;
+        cursor: pointer;
       }
 
       #easy {
