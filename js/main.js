@@ -1,5 +1,6 @@
 import { initBurger } from "./partials/icon_burger.js";
 import "./mode/chooseMode.js";
+import "./slider/slider.js";
 
 // Permet de pouvoir faire des import/include de fichiers "html"
 function loadHTML(selector, url, callback) {
@@ -23,10 +24,6 @@ function loadHTML(selector, url, callback) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  console.log("OK");
-
   loadHTML("header", "/include/partials/header.html", initBurger);
   loadHTML("footer", "/include/partials/footer.html");
 });
-
-console.log("déclenchement");

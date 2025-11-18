@@ -80,7 +80,6 @@ header {
           span {
             font-family: var(--font_primary);
             font-size: var(--fontSize_xs);
-
             padding: 5px;
           }
         }

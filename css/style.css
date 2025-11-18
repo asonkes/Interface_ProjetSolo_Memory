@@ -7,8 +7,11 @@
 /* import de la page du footer */
 @import "./partials/footer.css";
 
-/* import de la page home */
-@import "./views/home.css";
+/* import de la page home (section introduction) */
+@import "./views/home/home.css";
+
+/* import de la page home (section slider) */
+@import "./views/home/slider.css";
 
 /* import de la page game */
 @import "./views/game.css";
@@ -28,6 +31,11 @@ main {
   max-width: var(--width_full);
   min-height: var(--heightVH);
   padding-top: 60px;
+
+  @media (max-width: 500px) {
+    padding-top: 53px;
+    
+  }
 }
 
 .container {
@@ -46,6 +54,10 @@ main {
 
 .flex_between {
   justify-content: space-between;
+}
+
+.flex_shrink {
+  flex-shrink: 0;
 }
 
 .align_center {
