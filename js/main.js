@@ -1,43 +1,32 @@
 import { initBurger } from "./partials/icon_burger.js";
 import "./mode/chooseMode.js";
 
-// Permet de pouvoir faire des import/include de fichiers "html" 
+// Permet de pouvoir faire des import/include de fichiers "html"
 function loadHTML(selector, url, callback) {
-
-    // Fait une requête HTTP "GET" vers "url" 
-    fetch(url)
+  // Fait une requête HTTP "GET" vers "url"
+  fetch(url)
     // Transform la réponse en texte (ici du html)
-    .then(response => response.text())
-    .then(data => {
-        const sections = document.querySelectorAll(selector);
+    .then((response) => response.text())
+    .then((data) => {
+      const sections = document.querySelectorAll(selector);
 
-        sections.forEach(section => {
-            section.innerHTML = data;
+      sections.forEach((section) => {
+        section.innerHTML = data;
 
-            // Permet d'appeler une fonction après insertion du HTML
-            if(callback) callback();
-        })
+        // Permet d'appeler une fonction après insertion du HTML
+        if (callback) callback();
+      });
     })
     .catch((error) => {
       console.log(error);
-    })
+    });
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    loadHTML("header", "/include/partials/header.html", initBurger);
-    loadHTML("footer", "/include/partials/footer.html");
-})
+document.addEventListener("DOMContentLoaded", () => {
+  console.log("OK");
 
+  loadHTML("header", "/include/partials/header.html", initBurger);
+  loadHTML("footer", "/include/partials/footer.html");
+});
 
-
-
-
-
-
-
-
-
-
-
-
-
+console.log("déclenchement");

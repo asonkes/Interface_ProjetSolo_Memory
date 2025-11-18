@@ -1,4 +1,5 @@
-/** On va initialiser les 3 boutons différents pour le mode du jeu */ 
+/** On va initialiser les 3 boutons différents pour le mode du jeu */
+
 const chooseMode = document.querySelector(".chooseMode");
 const buttonEasy = document.getElementById("easy");
 const buttonMedium = document.getElementById("medium");
@@ -18,16 +19,19 @@ let tabEasy = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6];
 console.log(tabEasy);
 
 /** On va initialiser le type de tableau pour le mode medium */
-let tabMedium = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10, 11, 11, 12, 12];
+let tabMedium = [
+  1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10, 11, 11, 12, 12,
+];
 
 /** On va initialiser le type de tableau pour le mode difficile */
 let tabHard = [
   1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10, 11, 11, 12, 12,
-  13, 13, 14, 14, 15, 15, 16, 16, 17, 17, 18, 18
+  13, 13, 14, 14, 15, 15, 16, 16, 17, 17, 18, 18,
 ];
 
 /** Evenement au click sur le bouton 'EASY' */
-buttonEasy.addEventListener("click", () => {
+if (buttonEasy) {
+  buttonEasy.addEventListener("click", () => {
     /** Ajout de classes pour l'affichage des différentes pop-up */
     chooseMode.classList.add("active");
     container.classList.add("active");
@@ -40,12 +44,14 @@ buttonEasy.addEventListener("click", () => {
 
     /** Pour chaque élément du tableau */
     arrayEasy.forEach((element) => {
-        creationList(element);
+      creationList(element);
     });
-});
+  });
+}
 
 /** Evenement au click sur le bouton 'MEDIUM' */
-buttonMedium.addEventListener("click", () => {
+if (buttonMedium) {
+  buttonMedium.addEventListener("click", () => {
     /** Ajout de classes pour l'affichage des différentes pop-up */
     chooseMode.classList.add("active");
     container.classList.add("active");
@@ -58,30 +64,34 @@ buttonMedium.addEventListener("click", () => {
 
     /** Pour chaque élément du tableau */
     arrayMedium.forEach((element) => {
-        creationList(element);
+      creationList(element);
     });
-});
+  });
+}
 
 /** Evenement au click sur le bouton 'HARD' */
-buttonHard.addEventListener("click", () => {
+if (buttonHard) {
+  buttonHard.addEventListener("click", () => {
     /** Ajout de classes pour l'affichage des différentes pop-up */
     chooseMode.classList.add("active");
     container.classList.add("active");
     button.classList.add("active");
 
-  /** On va donc mélanger les éléments */
-  let arrayHard = tabHard;
-  mixCards(arrayHard);
-  console.log(arrayHard);
+    /** On va donc mélanger les éléments */
+    let arrayHard = tabHard;
+    mixCards(arrayHard);
+    console.log(arrayHard);
 
-  /** Pour chaque élément du tableau */
-  arrayHard.forEach((element) => {
-    creationList(element);
+    /** Pour chaque élément du tableau */
+    arrayHard.forEach((element) => {
+      creationList(element);
+    });
   });
-});
+}
 
 /** Evenement au click sur le bouton 'GO' */
-button.addEventListener("click", () => {
+if (button) {
+  button.addEventListener("click", () => {
     console.log("j'ai cliqué sur bouton");
     /** Ajout de classes pour l'affichage des différentes pop-up */
     button.classList.remove("active");
@@ -89,10 +99,11 @@ button.addEventListener("click", () => {
     /** On va initialiser chaque "li" */
     const li = document.querySelectorAll(".container ul li");
 
-    li.forEach(element => {
-        element.classList.remove("active");
-    })
-})
+    li.forEach((element) => {
+      element.classList.remove("active");
+    });
+  });
+}
 
 /*****************************************************/
 /** On va commencer à essayer de créer des fonctions */
