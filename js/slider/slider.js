@@ -26,18 +26,18 @@ if (iconRight) {
 }
 
 function refreshCarousel(direction) {
-  numero = numero + direction;
-
-  /** Permet de mettre (numero - 1) dans une variable */
-  let previousIndex = numero - 1;
-  /** Permet de mettre (numero + 1) dans une variable */
-  let nextIndex = numero + 1;
+  numero += direction;
 
   /** Si + petit que 0, image + élevée du tableau s'affiche */
   if (numero < 0) numero = tabSlider.length - 1;
 
   /** Si + grand que le nombre d'image du tableau, image 0 apprait */
   if (numero > tabSlider.length - 1) numero = 0;
+
+  /** Permet de mettre (numero - 1) dans une variable */
+  let previousIndex = numero - 1;
+  /** Permet de mettre (numero + 1) dans une variable */
+  let nextIndex = numero + 1;
 
   /** Permet que si previousNext + petit que 0, image + élevée du tableau s'affiche  */
   if (previousIndex < 0) previousIndex = tabSlider.length - 1;
