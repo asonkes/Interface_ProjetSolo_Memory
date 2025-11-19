@@ -1,5 +1,6 @@
 header {
   width: var(--width_full);
+  height: 65px;
   background-color: var(--color_primary);
   position: fixed;
   padding: 5px 0;
@@ -22,21 +23,25 @@ header {
       &.active {
         opacity: 1;
         position: absolute;
-        top: 60px;
+        top: 65px;
         right: 0;
         width: var(--width_reg);
-        height: calc(100vh - 98px);
+        height: calc(100vh - 103px);
         background-color: var(--color_primary);
         transition: all 1s ease-in-out;
+
+        @media (max-width: 700px) {
+          width: var(--width_medium);
+        }
+
+        @media (max-width: 500px) {
+          width: var(--width_full);
+        }
+
+        @media (max-width: 350px) {
+          height: calc(100vh - 123px);
+        }
       }
-    }
-
-    @media (max-width: 700px) {
-      width: var(--width_medium);
-    }
-
-    @media (max-width: 500px) {
-      width: var(--width_full);
     }
 
     ul {

@@ -14,7 +14,10 @@
 @import "./views/home/slider.css";
 
 /* import de la page game */
-@import "./views/game.css";
+@import "./views/game/game.css";
+
+/* import de la page pour le retournement des cards */
+@import "./views/game/flipCard.css";
 
 * {
   margin: 0;
@@ -30,11 +33,7 @@ body {
 main {
   max-width: var(--width_full);
   min-height: var(--heightVH);
-  padding-top: 60px;
-
-  @media (max-width: 500px) {
-    padding-top: 53px;
-  }
+  padding-top: 65px;
 }
 
 .container {

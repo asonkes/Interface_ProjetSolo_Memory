@@ -7,7 +7,7 @@
     padding: var(--padding_md);
     color: var(--color_primary);
     font-family: var(--font_primary);
-    font-size: var(--fontSize_l);
+    font-size: var(--fontSize_md_xl);
     border-radius: 20px;
 
     i {
@@ -30,7 +30,7 @@
   .width--60 {
     width: 60%;
 
-    @media (max-width: 850px) {
+    @media (max-width: 959px) {
       width: 55%;
     }
   }
@@ -51,7 +51,7 @@
 
   /* fonctionnalités icone */
   .icon {
-    font-size: var(--fontSize_med);
+    font-size: var(--fontSize_md);
     font-weight: bold;
     cursor: pointer;
   }

@@ -1,12 +1,10 @@
-@import "../variables/variables.css";
-
 #main_home {
   min-height: var(--heightVH);
   background-color: var(--color_secondary);
 
   .home_image {
     max-width: var(--width_full);
-    height: 540px;
+    height: 55vh;
     background-image: url("/images/background/site/background.avif");
     background-repeat: no-repeat;
     background-size: cover;
@@ -69,7 +67,7 @@
     max-width: var(--width_full);
     font-family: var(--font_secondary);
     color: var(--color_primary);
-    padding: 80px 0;
+    padding: 60px 0;
 
     .home_description--text {
       font-size: var(--fontSize_reg);

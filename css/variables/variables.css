@@ -16,8 +16,8 @@
   --fontSize_xxl: 2rem; /* 32px */
   --fontSize_xl: 1.75rem; /* 28px*/
   --fontSize_l: 1.625rem; /* 26px*/
-  --fontSize_med: 1.5rem; /* 24px */
-  --fontSize_l: 1.25rem; /* 20px */
+  --fontSize_md_xl: 1.5rem; /* 24px */
+  --fontSize_md: 1.25rem; /* 20px */
   --fontSize_reg: 1.125rem; /* 18px */
   --fontSize_s: 1rem; /* 16px */
   --fontSize_xs: 0.875rem; /* 14px */
@@ -32,6 +32,7 @@
   --height_full: 100%;
 
   /* padding */
+  --padding_xxxxl: 5rem; /* 80px */
   --padding_xxl: 2.5rem; /* 40px */
   --padding_md: 1.25rem; /* 20px */
   --padding_reg: 1rem; /* 16px */
@@ -40,4 +41,10 @@
 
   /* margin */
   --margin_med: 2.5rem; /* 40px */
+
+  /* media_queries 
+  * - 959px
+  * - 680px
+  * - 400px
+  */
 }

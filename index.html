@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- FONT GOOGLE -->
@@ -16,6 +17,8 @@
 
     <!-- Lien vers le fichier JS -->
     <script src="./js/main.js" type="module" defer></script>
+    <script src="/js/slider/slider.js" type="module" defer></script>
+    <script src="/js/mode/chooseTheme.js" type="module" defer></script>
 
     <!-- Lien vers 'fontawesome' -->
     <script src="https://kit.fontawesome.com/2cbf82340f.js" crossorigin="anonymous"></script>
@@ -66,13 +69,11 @@
           </h2>
           <div class="slider flex flex_center">
             <div class="flex_shrink width--60 height--50">
-              <a href="./include/views/game.html">
-                <img
-                  class="img opacity border_blue"
-                  src="images/background/dora/background_dora2.avif"
-                  alt="Image de Dora et de Babouche"
-                  id="img1" />
-              </a>
+              <img
+                class="img opacity border_blue slider_image"
+                src="images/background/dora/background_dora2.avif"
+                alt="Image de Dora et de Babouche"
+                id="img1" />
             </div>
             <div class="icon icon1 flex align_center">
               <i class="fa-solid fa-angle-left" id="iconLeft"></i>
@@ -80,7 +81,7 @@
             <div class="flex_shrink width--60 height--50">
               <a href="./include/views/game.html">
                 <img
-                  class="img border_blue"
+                  class="img border_blue slider_image"
                   src="images/background/patPatrouille/background_patPatrouille.avif"
                   alt="Image de toute l'équipe de PatPatrouille"
                   id="img2" />
@@ -90,13 +91,11 @@
               <i class="fa-solid fa-angle-right" id="iconRight"></i>
             </div>
             <div class="flex_shrink width--60 height--50">
-              <a href="./include/views/game.html">
-                <img
-                  class="img opacity border_blue"
-                  src="images/background/dinosaures/background_dino.avif"
-                  alt="Image de plusieurs dinosaures"
-                  id="img3" />
-              </a>
+              <img
+                class="img opacity border_blue slider_image"
+                src="images/background/dinosaures/background_dino.avif"
+                alt="Image de plusieurs dinosaures"
+                id="img3" />
             </div>
           </div>
         </div>

@@ -1,6 +1,4 @@
 import { initBurger } from "./partials/icon_burger.js";
-import "./mode/chooseMode.js";
-import "./slider/slider.js";
 
 // Permet de pouvoir faire des import/include de fichiers "html"
 function loadHTML(selector, url, callback) {
