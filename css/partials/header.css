@@ -8,11 +8,11 @@ header {
 
   .logo {
     width: 3.125rem;
+  }
 
-    img {
-      max-width: var(--width_full);
-      width: var(--width_full);
-    }
+  img {
+    max-width: var(--width_full);
+    width: var(--width_full);
   }
 
   nav {
@@ -57,7 +57,13 @@ header {
         width: 100%;
         padding: 5px 15px;
 
-        &:hover {
+        &:hover,
+        &:focus {
+          background-color: var(--color_tertiary);
+          transform: scale(1.02);
+        }
+
+        &.active {
           background-color: var(--color_tertiary);
         }
 

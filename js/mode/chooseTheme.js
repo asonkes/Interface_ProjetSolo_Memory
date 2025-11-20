@@ -17,7 +17,6 @@ if(imagesSlider) {
 }
 
 let idImage = localStorage.getItem("imageId");
-console.log("id récupéré", idImage);
 
 if(idImage && gameImage) {
     // Et ici on ajoute l'id
@@ -32,7 +31,6 @@ if(idImage && gameImage) {
 
 /** On récupère les boutons du choix de mode */
 const buttons = document.querySelectorAll(".button_mode");
-console.log()
 
 /** On reprend le h1 */
 const title = document.getElementById("title");

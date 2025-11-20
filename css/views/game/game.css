@@ -63,6 +63,7 @@
 
         &:hover {
           background-color: var(--color_tertiary);
+          transform: scale(1.02);
         }
 
         @media (max-width: 680px) {
