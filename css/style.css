@@ -13,11 +13,20 @@
 /* import de la page home (section slider) */
 @import "./views/home/slider.css";
 
+/* import de la page home (personnages) */
+@import "./views/home/personnages.css";
+
 /* import de la page game */
 @import "./views/game/game.css";
 
-/* import de la page pour le retournement des cards */
-@import "./views/game/flipCard.css";
+/* import pour le choix des modes */
+@import "./views/game/button_mode.css";
+
+/* import page game bouton play */
+@import "./views/game/button_play.css";
+
+/* import page game, pour les cards */
+@import "./views/game/cards.css";
 
 /*******************************************/
 /* Lien vers fichiers fonts dans le projet */

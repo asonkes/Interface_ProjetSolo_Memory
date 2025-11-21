@@ -1,3 +1,7 @@
+/*****************************************************/
+/********** Background du slider + défilement ********/
+/*****************************************************/
+
 /** On va aller initialiser les variables dont on a besoin */
 /** On va chercher les icones */
 const iconLeft = document.getElementById("iconLeft");

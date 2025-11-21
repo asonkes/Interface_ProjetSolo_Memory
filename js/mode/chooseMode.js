@@ -1,7 +1,13 @@
-/** On va initialiser les 3 boutons différents pour le mode du jeu */
+import { mixCards } from "/js/utils/mixCards.js";
+import { creationBgCards } from "/js/utils/creationBgCards.js";
+
+/*****************************************************/
+/******* En fonction du mode, quantité de cards ******/
+/*****************************************************/
+
 /** Tableau facile */
 let tabEasy = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6];
-console.log(tabEasy);
+
 /** Tableau medium */
 let tabMedium = [
   1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10, 11, 11, 12, 12,
@@ -17,7 +23,7 @@ const buttonsMode = document.querySelectorAll(".button_mode");
 /** On sélectionne l'élément chooseMode */
 const chooseMode = document.querySelector(".chooseMode");
 /** On va intiailiser le container */
-const cardWrapper = document.querySelector(".card_wrapper");
+const cardBlock = document.querySelector(".card_wrapper");
 /** On va initialiser le parent de la liste 'card' */
 const card = document.querySelector(".card"); 
 
@@ -28,7 +34,7 @@ buttonsMode.forEach(element => {
   element.addEventListener("click", () => {
     /** Ajout de classes pour l'affichage des différentes pop-up */
     chooseMode.classList.add("active");
-    cardWrapper.classList.add("active");
+    cardBlock.classList.add("active");
     button.classList.add("active");
   })
 })
@@ -48,7 +54,6 @@ buttonEasy.addEventListener("click", () => {
   /** On va donc mélanger les éléments */
   let arrayEasy = tabEasy;
   mixCards(arrayEasy);
-  console.log(arrayEasy);
 
   /** Pour chaque élément du tableau */
   arrayEasy.forEach((element) => {
@@ -108,30 +113,26 @@ if (button) {
     cardBack.classList.add("active");
 
     cardBlock.forEach((element) => {
-      element.classList.remove("active");
+      element.classList.add("active");
     });
   });
 }
 
-/*****************************************************/
-/** On va commencer à essayer de créer des fonctions */
-/*****************************************************/
+/*************************************************************/
+/** Fonction qui permet de globaliser la création d'éléments */
+/*************************************************************/
 
 /** Fonction pour créer les 'div'  */
-function creationList(element) {
+function creationList() {
   /** On va créer tous les div (le block parent */
   const cardBlock = document.createElement("div");
   /** On ajoute une 1ère classe 'cardFront' */
   cardBlock.classList.add("cardBlock")
-  /** On va ajouter une 2eme classe 'active' */
-  cardBlock.classList.add("active");
 
   /** On va créer tous les 'front' des cards */
   const cardFront = document.createElement("div");
   /** On va ajouter une classe au span */
   cardFront.classList.add("cardFront");
-  /** On va afficher tous les chiffres */
-  cardFront.textContent = `${element}`;
 
   /** On va créer les 'back' des cards */
   const cardBack = document.createElement("div");
@@ -140,21 +141,9 @@ function creationList(element) {
 
   cardBlock.append(cardFront, cardBack);
   card.append(cardBlock);
-}
 
-/** Fonctionnalité pour pouvoir mélanger les éléments du tableau */
-function mixCards(array) {
-  /** Ici on détermine la longueur du tableau */
-  let index = array.length;
-
-  /** Tant qu'on est pas arrivé à l'index '0', on mélange */
-  while (index != 0) {
-    /** On crée des nombres aléatoires entre 0 et 11 */
-    let random = Math.floor(Math.random() * index);
-    index--;
-
-    /** On échange les valeurs */
-    /** Ex: random[7], index[11], on va chercher valeur dans la 7eme position et la mettre à la 11eme */
-    [array[index], array[random]] = [array[random], array[index]];
-  }
+  let idImage = localStorage.getItem("backgroundId");
+  if(idImage && cardBlock) {
+    creationBgCards(cardBlock, idImage);
+    }
 }

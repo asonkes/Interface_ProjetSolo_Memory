@@ -1,3 +1,7 @@
+/*****************************************************/
+/************ Fonctionnalités du menu Burger *********/
+/*****************************************************/
+
 export function initBurger() {
     const burger_icon = document.querySelector(".burger_icon");
     const nav = document.querySelector(".nav");
@@ -40,7 +44,6 @@ export function initBurger() {
     })
 
     let valueId = localStorage.getItem("linkId");
-    console.log(valueId);
 
     /* Au rechargement */
     if(valueId) {

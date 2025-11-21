@@ -1,0 +1,41 @@
+/* propriétés choix des boutons */
+.chooseMode {
+  max-width: 100%;
+  padding: 40px 0;
+
+  @media (max-width: 680px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &.active {
+    display: none;
+  }
+
+  #easy,
+  #medium,
+  #hard {
+    max-width: 100%;
+    width: 200px;
+    font-family: var(--font_primary);
+    font-size: var(--fontSize_s);
+    font-weight: bold;
+    background-color: var(--color_primary);
+    color: var(--color_secondary);
+    margin: 0 20px;
+    padding: var(--padding_reg);
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+      background-color: var(--color_tertiary);
+      transform: scale(1.02);
+    }
+
+    @media (max-width: 680px) {
+      margin: 20px 0;
+    }
+  }
+}

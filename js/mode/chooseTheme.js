@@ -1,4 +1,6 @@
-/** On va initialiser les variables */
+/*****************************************************/
+/*** Click sur image slider, change bg page Play *****/
+/*****************************************************/
 
 /** Différentes images du slider */ 
 const imagesSlider = document.querySelectorAll(".slider_image");
@@ -10,18 +12,17 @@ if(imagesSlider) {
     imagesSlider.forEach(element => {
     element.addEventListener("click", () => {
         if(element.id) {
-            localStorage.setItem("imageId", element.id);
+            localStorage.setItem("backgroundId", element.id);
         }
         })
     })
 }
 
-let idImage = localStorage.getItem("imageId");
+let idImage = localStorage.getItem("backgroundId");
 
 if(idImage && gameImage) {
     // Et ici on ajoute l'id
     gameImage.dataset.id = idImage;
-    console.log(gameImage.dataset.id);
 }
 
 /******************************************** */

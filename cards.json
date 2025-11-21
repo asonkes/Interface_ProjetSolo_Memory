@@ -4,7 +4,7 @@
     {
       "id": 0,
       "nom": "Capitaine Turbo",
-      "image": "./images/cards/patPatrouille/capt_turbo.png",
+      "image": "/images/cards/patPatrouille/capt_turbo.png",
       "description": "Biologiste marin qui aide ses amis avec son bateau.",
       "equipement": null,
       "phrase_culte": null,
@@ -19,7 +19,7 @@
     {
       "id": 1,
       "nom": "Chase",
-      "image": "./images/cards/patPatrouille/chase.png",
+      "image": "/images/cards/patPatrouille/chase.png",
       "description": "Chien policier et chef des opérations.",
       "equipement": "Voiture de police avec mégaphone et filet.",
       "phrase_culte": "Chase est sur le coup",
@@ -34,7 +34,7 @@
     {
       "id": 2,
       "nom": "Everest",
-      "image": "./images/cards/patPatrouille/everest.png",
+      "image": "/images/cards/patPatrouille/everest.png",
       "description": "Husky sauveteur des neiges.",
       "equipement": "Motoneige pour les missions hivernales.",
       "phrase_culte": "La neige, c'est mon domaine !",
@@ -49,7 +49,7 @@
     {
       "id": 3,
       "nom": "La fermière Rumi",
-      "image": "./images/cards/patPatrouille/fermiere_rumi.png",
+      "image": "/images/cards/patPatrouille/fermiere_rumi.png",
       "description": "Fermière dévouée de la Grande Vallée.",
       "equipement": null,
       "phrase_culte": null,
@@ -64,7 +64,7 @@
     {
       "id": 4,
       "nom": "Jake",
-      "image": "./images/cards/patPatrouille/jake.png",
+      "image": "/images/cards/patPatrouille/jake.png",
       "description": "Vit avec Everest dans la station de ski.",
       "equipement": "Planche à neige",
       "phrase_culte": null,
@@ -79,7 +79,7 @@
     {
       "id": 5,
       "nom": "Mr Le Maire Hollinger",
-      "image": "./images/cards/patPatrouille/m_le_maire_hollinger.png",
+      "image": "/images/cards/patPatrouille/m_le_maire_hollinger.png",
       "description": "Maire autoproclamé de Foggy Bottom.",
       "equipement": "Toujours avec ses 6 chats espiègles.",
       "phrase_culte": null,
@@ -94,7 +94,7 @@
     {
       "id": 6,
       "nom": "Marcus",
-      "image": "./images/cards/patPatrouille/marcus.png",
+      "image": "/images/cards/patPatrouille/marcus.png",
       "description": "Dalmatien pompier et médecin secouriste.",
       "equipement": "Camion avec échelle et lance à eau.",
       "phrase_culte": "Je suis tout fleu, tout flamme !",
@@ -109,7 +109,7 @@
     {
       "id": 7,
       "nom": "Maurice",
-      "image": "./images/cards/patPatrouille/maurice.png",
+      "image": "/images/cards/patPatrouille/maurice.png",
       "description": "Le morse ami de Capitaine Turbo.",
       "equipement": null,
       "phrase_culte": "Hou hou !",
@@ -124,7 +124,7 @@
     {
       "id": 8,
       "nom": "Mme La Maire Goodway",
-      "image": "./images/cards/patPatrouille/mme_la_maire_goodway.png",
+      "image": "/images/cards/patPatrouille/mme_la_maire_goodway.png",
       "description": "Amicale mais souvent source de catastrophes.",
       "equipement": "Toujours avec sa poule Galinetta.",
       "phrase_culte": null,
@@ -139,7 +139,7 @@
     {
       "id": 9,
       "nom": "Galinetta",
-      "image": "./images/cards/patPatrouille/poule_galinetta.png",
+      "image": "/images/cards/patPatrouille/poule_gallinetta.png",
       "description": "Fidèle poule de Mme Goodway.",
       "equipement": null,
       "phrase_culte": "Cot cot !",
@@ -154,7 +154,7 @@
     {
       "id": 10,
       "nom": "Rex",
-      "image": "./images/cards/patPatrouille/rex.png",
+      "image": "/images/cards/patPatrouille/rex.png",
       "description": "Bouvier bernois expert en dinosaures.",
       "equipement": "Véhicule adapté aux terrains accidentés.",
       "phrase_culte": null,
@@ -169,7 +169,7 @@
     {
       "id": 11,
       "nom": "Chien Robot",
-      "image": "./images/cards/patPatrouille/robot.png",
+      "image": "/images/cards/patPatrouille/robot.png",
       "description": "Allié technologique de la Pat Patrouille.",
       "equipement": "Véhicule Robot Dog Patroller.",
       "phrase_culte": null,
@@ -184,7 +184,7 @@
     {
       "id": 12,
       "nom": "Rocky",
-      "image": "./images/cards/patPatrouille/rocky.png",
+      "image": "/images/cards/patPatrouille/rocky.png",
       "description": "Croisé terrier bricoleur.",
       "equipement": "Camion de recyclage avec outils multifonctions.",
       "phrase_culte": "Ne gaspille rien, recycle tout !",
@@ -199,7 +199,7 @@
     {
       "id": 13,
       "nom": "Romy",
-      "image": "./images/cards/patPatrouille/romy.png",
+      "image": "/images/cards/patPatrouille/romy.png",
       "description": "Chienne pleine d'énergie.",
       "equipement": "Petit véhicule tout-terrain.",
       "phrase_culte": "On fonce, les amis !",
@@ -214,7 +214,7 @@
     {
       "id": 14,
       "nom": "Ruben",
-      "image": "./images/cards/patPatrouille/ruben.png",
+      "image": "/images/cards/patPatrouille/ruben.png",
       "description": "Bouledogue anglais, ingénieur en chef.",
       "equipement": "Bulldozer jaune avec pelle et foreuse.",
       "phrase_culte": "C'est du gâteau pour Ruben !",
@@ -229,7 +229,7 @@
     {
       "id": 15,
       "nom": "Ryder",
-      "image": "./images/cards/patPatrouille/ryder.png",
+      "image": "/images/cards/patPatrouille/ryder.png",
       "description": "Chef et fondateur de la Pat Patrouille.",
       "equipement": "Technologies pour surveiller la Grande Vallée.",
       "phrase_culte": "Aucune mission n'est trop dure, car mes amis, ils assurent !",
@@ -244,7 +244,7 @@
     {
       "id": 16,
       "nom": "Stella",
-      "image": "./images/cards/patPatrouille/stella.png",
+      "image": "/images/cards/patPatrouille/stella.png",
       "description": "Cocker experte en vol et reconnaissance aérienne.",
       "equipement": "Hélicoptère rose avec treuil de sauvetage.",
       "phrase_culte": "Prête pour un petit tour dans les airs !",
@@ -259,7 +259,7 @@
     {
       "id": 17,
       "nom": "Zuma",
-      "image": "./images/cards/patPatrouille/zuma.png",
+      "image": "/images/cards/patPatrouille/zuma.png",
       "description": "Labrador expert en sauvetage aquatique.",
       "equipement": "Aéroglisseur ultra-rapide.",
       "phrase_culte": "Prêt à plonger !",

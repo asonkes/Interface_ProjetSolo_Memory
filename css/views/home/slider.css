@@ -45,10 +45,9 @@
     width: var(--width_full);
     height: var(--height_full);
     object-fit: cover;
-    display: flex;
 
     &:hover {
-      transform: scale(1.02);
+      transform: scale(1.005);
     }
   }
 

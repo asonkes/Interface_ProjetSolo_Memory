@@ -1,0 +1,96 @@
+/** Propriétés pour les cards */
+.game_card {
+  &.active {
+    max-width: var(--width_full);
+    min-height: var(--heightVH);
+    background-image: url("/images/background/site/background_paper.avif");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .card_wrapper {
+    height: 0;
+    opacity: 0;
+
+    &.active {
+      height: var(--height_full);
+      opacity: 1;
+      padding: var(--padding_xxxxl);
+      transition: all 1s ease-in-out;
+    }
+
+    .card {
+      height: 0;
+
+      &.active {
+        height: var(--height_full);
+        opacity: 1;
+        position: relative;
+        width: var(--width_full);
+        flex-wrap: wrap;
+        list-style: none;
+        gap: 2rem;
+      }
+
+      .cardBlock {
+        position: absolute;
+        background-color: var(--color_secondary);
+        width: 130px;
+        height: 130px;
+        border-radius: 20px;
+
+        &.doraBg {
+          background-image: url("/images/cards/dora/recto.avif");
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center;
+        }
+
+        &.patPatrouilleBg {
+          background-image: url("/images/cards/patPatrouille/recto.png");
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center;
+        }
+
+        &.dinoBg {
+          background-image: url("/images/cards/dinosaures/recto.png");
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center;
+        }
+
+        &.active {
+          position: relative;
+          width: 130px;
+          height: 130px;
+          display: flex;
+          /* perspective se met sur les enfants */
+          transform-style: preserve-3d;
+          transition: all 1s ease;
+
+          &:hover {
+            transform: rotateY(180deg);
+          }
+        }
+
+        .cardFront,
+        .cardBack {
+          position: absolute;
+          width: var(--width_full);
+          height: var(--height_full);
+          backface-visibility: hidden;
+          -webkit-backface-visibility: hidden;
+          border-radius: 20px;
+          border: 2px solid var(--color_primary);
+        }
+
+        .cardBack {
+          transform: rotateY(180deg);
+          background-color: aquamarine;
+        }
+      }
+    }
+  }
+}
