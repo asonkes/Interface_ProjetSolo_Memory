@@ -10,12 +10,33 @@ const persoContainer = document.querySelector(".persoContainer");
 async function createPersonnages() {
     const data = await jsonFunction();
 
-    /** Là j'obtiens les infos sur les 18 personnages => tableau */
-    let tabPersonnages = data.cards.patPatrouille;
+    /** Tableau Pat Patrouille */
+    let tabPatPatrouille = data.cards.patPatrouille;
+    /** Tableau Dora */
+    let tabDora = data.cards.dora;
+    /** Tableau Dino */
+    let tabDino = data.cards.dino;
 
-    tabPersonnages.forEach(element => {
-        persoWrapper(element)
-    })
+    if(tabPatPatrouille) {
+        tabPatPatrouille.forEach(element => {
+            persoWrapper(element)
+
+            const title_paPatrouille = document.querySelector(".title2");
+            title_paPatrouille.textContent = `Pat Patrouille`;
+        })
+    }
+    
+    if(tabDora) {
+        tabDora.forEach(element => {
+            persoWrapper(element)
+        })
+    }
+
+    if(tabDino) {
+        tabDino.forEach(element => {
+            persoWrapper(element);
+        })
+    }
 }
 
 createPersonnages();
@@ -42,12 +63,62 @@ function persoWrapper(element) {
     /** Ici on va créer l'image */
     const img = document.createElement("img");
     img.src = element.image;
-    console.log(element);
 
+    /** On va créer le titre */
+    const title = document.createElement("p");
+    title.classList.add("title");
+    
+    const span_title1 = document.createElement("span");
+    span_title1.textContent = "Nom : ";
+
+    const span_title2 = document.createElement("span");
+    span_title2.textContent = element.nom;
+
+    /** On va créer la description */
+    const description = document.createElement("p");
+    description.classList.add("description");
+
+    const description_span1 = document.createElement("span");
+    description_span1.textContent = 'Description : ';
+
+    const description_span2 = document.createElement("span");
+    description_span2.textContent = element.description;
+
+    /** On va créer le rôle */
+    const role = document.createElement("p");
+    role.classList.add("role");
+
+    const role_span1 = document.createElement("span");
+    role_span1.textContent = `Rôle : `;
+
+    const role_span2 = document.createElement("span");
+    role_span2.textContent = element.role;
+
+    /** On va créer la particularité */
+    const particularite = document.createElement("p");
+    particularite.classList.add("particularite");
+
+    const particularite_span1 = document.createElement("span");
+    particularite_span1.textContent = `Particularité : `;
+
+    const particularite_span2 = document.createElement("span");
+    particularite_span2.textContent = element.particularite;
+
+    /** Parent des spans de rôle */
+    role.append(role_span1, role_span2);
+    /** Parent des spans de particularite */
+    particularite.append(particularite_span1, particularite_span2);
+    /** Parent des spans de description */
+    description.append(description_span1, description_span2);
+    /** Parent des spans du titre */
+    title.append(span_title1, span_title2);
+    /** Parent de 'title', de 'description', de 'particularite', de 'role' */
+    block_text.append(title, description, particularite, role);
+    /** Parent de l'image */
     block_image.appendChild(img);
-
+    /** Parent du 'block_image' et du 'block_text' */
     perso.append(block_image, block_text);
-
+    /** Parent de la div 'perso' */
     persoContainer.appendChild(perso);
 }
 
