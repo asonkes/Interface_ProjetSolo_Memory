@@ -132,12 +132,12 @@ function creationList() {
   cardBlock.classList.add("cardBlock")
 
   /** On va créer tous les 'front' des cards */
-  const cardFront = document.createElement("div");
+  const cardFront = document.createElement("img");
   /** On va ajouter une classe au span */
   cardFront.classList.add("cardFront");
 
   /** On va créer les 'back' des cards */
-  const cardBack = document.createElement("div");
+  const cardBack = document.createElement("img");
   /** On va lui ajouter une classe */
   cardBack.classList.add("cardBack");
 
@@ -145,7 +145,7 @@ function creationList() {
   card.append(cardBlock);
 
   let idImage = localStorage.getItem("backgroundId");
-  if(idImage && cardBlock) {
-    creationBgCards(cardBlock, idImage);
+  if(idImage && cardFront) {
+    creationBgCards(cardFront, idImage);
     }
 }
