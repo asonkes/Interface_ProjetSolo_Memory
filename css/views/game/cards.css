@@ -39,27 +39,7 @@
         width: 130px;
         height: 130px;
         border-radius: 20px;
-
-        &.doraBg {
-          background-image: url("/images/cards/dora/recto.avif");
-          background-repeat: no-repeat;
-          background-size: cover;
-          background-position: center;
-        }
-
-        &.patPatrouilleBg {
-          background-image: url("/images/cards/patPatrouille/recto.png");
-          background-repeat: no-repeat;
-          background-size: cover;
-          background-position: center;
-        }
-
-        &.dinoBg {
-          background-image: url("/images/cards/dinosaures/recto.png");
-          background-repeat: no-repeat;
-          background-size: cover;
-          background-position: center;
-        }
+        border: 1px solid rgba(46, 64, 87, 0.6);
 
         &.active {
           position: relative;
@@ -83,7 +63,12 @@
           backface-visibility: hidden;
           -webkit-backface-visibility: hidden;
           border-radius: 20px;
-          border: 2px solid var(--color_primary);
+        }
+
+        .cardFront {
+          max-width: 100%;
+          width: 100%;
+          object-fit: cover;
         }
 
         .cardBack {

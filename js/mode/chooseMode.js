@@ -23,7 +23,7 @@ const buttonsMode = document.querySelectorAll(".button_mode");
 /** On sélectionne l'élément chooseMode */
 const chooseMode = document.querySelector(".chooseMode");
 /** On va intiailiser le container */
-const cardBlock = document.querySelector(".card_wrapper");
+const cardWrapper = document.querySelector(".card_wrapper");
 /** On va initialiser le parent de la liste 'card' */
 const card = document.querySelector(".card"); 
 
@@ -34,7 +34,7 @@ buttonsMode.forEach(element => {
   element.addEventListener("click", () => {
     /** Ajout de classes pour l'affichage des différentes pop-up */
     chooseMode.classList.add("active");
-    cardBlock.classList.add("active");
+    cardWrapper.classList.add("active");
     button.classList.add("active");
   })
 })
@@ -130,12 +130,12 @@ function creationList() {
   cardBlock.classList.add("cardBlock")
 
   /** On va créer tous les 'front' des cards */
-  const cardFront = document.createElement("div");
+  const cardFront = document.createElement("img");
   /** On va ajouter une classe au span */
   cardFront.classList.add("cardFront");
 
   /** On va créer les 'back' des cards */
-  const cardBack = document.createElement("div");
+  const cardBack = document.createElement("img");
   /** On va lui ajouter une classe */
   cardBack.classList.add("cardBack");
 
@@ -143,7 +143,7 @@ function creationList() {
   card.append(cardBlock);
 
   let idImage = localStorage.getItem("backgroundId");
-  if(idImage && cardBlock) {
-    creationBgCards(cardBlock, idImage);
+  if(idImage && cardFront) {
+    creationBgCards(cardFront, idImage);
     }
 }
