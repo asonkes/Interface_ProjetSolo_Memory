@@ -7,6 +7,7 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    border: 4px solid red;
   }
 
   .card_wrapper {
@@ -18,6 +19,11 @@
       opacity: 1;
       padding: var(--padding_xxxxl);
       transition: all 1s ease-in-out;
+      border: 4px solid blue;
+    }
+
+    &.cardWrapper_padding {
+      padding: 0 !important;
     }
 
     .card {
@@ -31,6 +37,11 @@
         flex-wrap: wrap;
         list-style: none;
         gap: 2rem;
+        border: 4px solid fuchsia;
+
+        @media (max-width: 500px) {
+          gap: 1rem;
+        }
       }
 
       .cardBlock {
@@ -39,6 +50,16 @@
         width: 130px;
         height: 130px;
         border-radius: 20px;
+
+        @media (max-width: 531px) {
+          width: 100px;
+          height: 100px;
+        }
+
+        @media (max-width: 500px) {
+          width: 80px;
+          height: 80px;
+        }
 
         &.doraBg {
           background-image: url("/images/cards/dora/recto.avif");
@@ -63,8 +84,6 @@
 
         &.active {
           position: relative;
-          width: 130px;
-          height: 130px;
           display: flex;
           /* perspective se met sur les enfants */
           transform-style: preserve-3d;
@@ -83,7 +102,7 @@
           backface-visibility: hidden;
           -webkit-backface-visibility: hidden;
           border-radius: 20px;
-          border: 2px solid var(--color_primary);
+          border: 1px solid var(--color_primary);
         }
 
         .cardBack {
@@ -91,6 +110,14 @@
           background-color: aquamarine;
         }
       }
+    }
+  }
+
+  .fullScreen {
+    display: none;
+
+    @media (max-width: 959px) {
+      display: none;
     }
   }
 }

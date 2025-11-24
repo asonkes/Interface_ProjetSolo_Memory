@@ -3,7 +3,7 @@ header {
   height: 65px;
   background-color: var(--color_primary);
   position: fixed;
-  padding: 5px 0;
+  padding: var(--padding_xs) 0;
   z-index: 999999;
 
   .logo {
@@ -54,8 +54,8 @@ header {
       }
 
       li {
-        width: 100%;
-        padding: 5px 15px;
+        width: var(--width_full);
+        padding: var(--padding_xs) var(--padding_reg);
 
         &:hover,
         &:focus {
@@ -91,7 +91,7 @@ header {
           span {
             font-family: var(--font_primary);
             font-size: var(--fontSize_xs);
-            padding: 5px;
+            padding: var(--padding_xs);
           }
         }
       }

@@ -1,3 +1,6 @@
+import { jsonFunction } from "/js/utils/jsonFunction.js";
+import { createPersonnages } from "/js/personnages/personnages.js";
+
 /*****************************************************/
 /********** Background du slider + défilement ********/
 /*****************************************************/
@@ -9,6 +12,7 @@ const iconRight = document.getElementById("iconRight");
 
 /** On récupère les images */
 const imagesSliderDOM = document.querySelectorAll(".slider_image");
+
 /** On récupère le chemin des images */
 const sliderImage = [
   "images/background/dora/background_dora2.avif",
@@ -22,7 +26,44 @@ const sliderText = [
   "Image de plusieurs dinosaures"
 ]
 /** On récupère l'id */
-const sliderId = ["img1", "img2", "img3"]
+const sliderId = ["img1", "img2", "img3"];
+
+/*****************************************************/
+/********** Affichage différents personnages *********/
+/*****************************************************/
+const data = await jsonFunction(); 
+/** Différents tableaux dont on a besoin */
+/** Tableau Pat Patrouille */
+const tabPatPatrouille = data.cards.patPatrouille;
+/** Tableau Dora */
+const tabDora = data.cards.dora;
+/** Tableau Dino */
+const tabDino = data.cards.dino;
+/** On créé un tableau généralavec les autres tableaux */
+const tabThemeAll = [tabDora, tabPatPatrouille, tabDino];
+/** Et on récupère l'élément parent */
+const persoContainer = document.querySelector(".persoContainer");
+/** Tab pour les titres des persos */
+const tabTitlePerso = ["Dora", "Pat Patrouille", "Dinosaures"];
+/** Variable pour le bouton */
+const buttonPerso = document.getElementById("button_perso");
+/** On va modifier le titre pour les persos */
+const title = document.querySelector(".title2");
+
+/** Permet d'afficher le thème par défaut */
+let persoAAfficher  = tabPatPatrouille; 
+title.textContent = `Pat Patrouille`;
+/** On vide persoContainer au cas où */
+persoContainer.innerHTML = "";
+/** On fait la fonction pour afficher les 8 premiers éléments */
+createPersonnages(persoAAfficher , 0, 8);
+/** Et ici, c'est s'il y a le bouton */
+if(buttonPerso) {
+  buttonPerso.addEventListener("click", () => {
+    createPersonnages(persoAAfficher , 8, 18);
+    buttonPerso.classList.add("active");
+  })
+}
 
 /** On met numero = 1 car image Patpatrouille commence à 1 (dora avant) */
 let numero = 1;
@@ -41,7 +82,7 @@ function refreshCarousel(direction) {
   /** Si + petit que 0, image + élevée du tableau s'affiche */
   if (numero < 0) numero = sliderImage.length - 1;
 
-  /** Si + grand que le nombre d'image du tableau, image 0 apprait */
+  /** Si + grand que le nombre d'image du tableau, image 0 apparait */
   if (numero > sliderImage.length - 1) numero = 0;
 
   /** Permet de mettre (numero - 1) dans une variable */
@@ -57,9 +98,20 @@ function refreshCarousel(direction) {
 
   const indices = [previousIndex, numero, nextIndex];
 
-  imagesSliderDOM.forEach((img, i) => {
-  img.src = sliderImage[indices[i]];
-  img.alt = sliderText[indices[i]];
-  img.id = sliderId[indices[i]];
+  imagesSliderDOM.forEach((element, index) => {
+    element.src = sliderImage[indices[index]];
+    element.alt = sliderText[indices[index]];
+    element.id = sliderId[indices[index]];
   });
+
+    /** On choisit les perso à afficher */ 
+    persoAAfficher = tabThemeAll[numero];
+    // On vide le container
+    persoContainer.innerHTML = "";
+    title.innerHTML = "";
+    title.textContent = tabTitlePerso[numero]; 
+    buttonPerso.classList.remove("active");
+    // On crée une carte pour chaque perso
+    createPersonnages(persoAAfficher, 0, 8);
+
 }

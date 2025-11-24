@@ -21,13 +21,49 @@
     <!-- Lien vers 'fontawesome' -->
     <script src="https://kit.fontawesome.com/2cbf82340f.js" crossorigin="anonymous"></script>
 
+    <!-- Lien vers 'favicon' -->
+    <link rel="icon" type="image/vnd.icon" href="/images/favicon/favicon.ico" />
+
     <title>Memory Game</title>
   </head>
   <body>
     <header class="flex flex_center"></header>
 
-    <main>
-      <h1>Page Contact</h1>
+    <main class="flex" id="main_contact">
+      <div class="container">
+        <div class="contact flex direction_column align_center">
+          <h1 class="text_center">Contactez-nous !!!</h1>
+          <div>
+            <div class="block1 flex">
+              <div class="name flex direction_column">
+                <label for="name">Nom :</label>
+                <input type="text" placeholder="nom" />
+              </div>
+              <div class="lastname flex direction_column">
+                <label for="lastname">Prénom :</label>
+                <input type="text" placeholder="prénom" />
+              </div>
+            </div>
+            <div class="block2 flex">
+              <div class="email flex direction_column">
+                <label for="email">E-mail :</label>
+                <input type="text" placeholder="e-mail" />
+              </div>
+              <div class="password flex direction_column">
+                <label for="password">Mot de passe :</label>
+                <input type="text" placeholder="mot de passe" />
+              </div>
+            </div>
+            <div class="message flex direction_column align_center">
+              <label for="message">Message :</label>
+              <textarea name="message" id="message" rows="10"></textarea>
+            </div>
+            <div class="button flex flex_center">
+              <button>Envoyer</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
 
     <footer></footer>

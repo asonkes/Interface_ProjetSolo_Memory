@@ -3,7 +3,7 @@
 
   h2 {
     width: fit-content;
-    margin: 20px auto 0 auto;
+    margin: var(--margin_reg) auto 0 auto;
     padding: var(--padding_md);
     color: var(--color_primary);
     font-family: var(--font_primary);
@@ -19,7 +19,7 @@
 /* fonctionnalité slider */
 .slider {
   max-width: var(--width_full);
-  padding: 40px 0;
+  padding: var(--padding_xxl) 0;
   gap: 1rem;
 
   @media (max-width: 680px) {

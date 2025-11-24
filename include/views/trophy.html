@@ -21,13 +21,51 @@
     <!-- Lien vers 'fontawesome' -->
     <script src="https://kit.fontawesome.com/2cbf82340f.js" crossorigin="anonymous"></script>
 
+    <!-- Lien vers 'favicon' -->
+    <link rel="icon" type="image/vnd.icon" href="/images/favicon/favicon.ico" />
+
     <title>Memory Game</title>
   </head>
   <body>
     <header class="flex flex_center"></header>
 
-    <main>
-      <h1>Page Scores</h1>
+    <main class="flex" id="main_trophy">
+      <div class="container">
+        <div class="trophy">
+          <h1 class="text_center">Découvrez vos scores !</h1>
+          <div class="trophy_dora flex direction_column">
+            <p class="title">Thème Pat Patrouille :</p>
+            <p>
+              <span aria-label="victoire">🎉​🎉​🎉​ Nombre de parties gagnées :</span>
+            </p>
+            <p>
+              <span aria-label="perte">😭​😭​😭​ Nombre de parties perdues :</span>
+            </p>
+          </div>
+          <div class="trophy_patPatrouille flex direction_column">
+            <p class="title">Thème Dora :</p>
+            <p>
+              <span aria-label="victoire">🎉​🎉​🎉​ Nombre de parties gagnées :</span>
+            </p>
+            <p>
+              <span aria-label="perte">😭​😭​😭​ Nombre de parties perdues :</span>
+            </p>
+          </div>
+          <div class="trophy_dino flex direction_column">
+            <p class="title">Thème Dinosaures :</p>
+            <p>
+              <span aria-label="victoire">🎉​🎉​🎉​Nombre de parties gagnées :</span>
+            </p>
+            <p>
+              <span aria-label="perte">😭​😭​😭​ Nombre de parties perdues :</span>
+            </p>
+          </div>
+
+          <div class="button flex flex_center">
+            <button>Réinitialiser</button>
+          </div>
+        </div>
+      </div>
     </main>
 
     <footer></footer>

@@ -1,7 +1,7 @@
 /* Fonctionnalités pour le bouton pour lancer le jeu et faire apparaître les cards */
 button {
   &.active {
-    height: 100%;
+    height: var(--height_full);
     opacity: 1;
     position: absolute;
     width: 80px;

@@ -23,7 +23,7 @@ const buttonsMode = document.querySelectorAll(".button_mode");
 /** On sélectionne l'élément chooseMode */
 const chooseMode = document.querySelector(".chooseMode");
 /** On va intiailiser le container */
-const cardBlock = document.querySelector(".card_wrapper");
+const cardWrapper = document.querySelector(".card_wrapper");
 /** On va initialiser le parent de la liste 'card' */
 const card = document.querySelector(".card"); 
 
@@ -34,7 +34,7 @@ buttonsMode.forEach(element => {
   element.addEventListener("click", () => {
     /** Ajout de classes pour l'affichage des différentes pop-up */
     chooseMode.classList.add("active");
-    cardBlock.classList.add("active");
+    cardWrapper.classList.add("active");
     button.classList.add("active");
   })
 })
@@ -94,6 +94,8 @@ const button = document.getElementById("button");
 /** Evenement au click sur le bouton 'GO' */
 if (button) {
   button.addEventListener("click", () => {
+    /** On ajoute une classe sur cardWrapper */
+    cardWrapper.classList.add("cardWrapper_padding");
     /** Permet de faire disparaitre le bouton */
     button.classList.remove("active");
     /** On va ajouter le parent */

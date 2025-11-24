@@ -15,7 +15,7 @@
     width: fit-content;
     height: 450px;
     margin: auto;
-    padding: 0 20px;
+    padding: 0 var(--padding_md);
 
     .home_title--img1,
     .home_title--img2 {
@@ -67,11 +67,11 @@
     max-width: var(--width_full);
     font-family: var(--font_secondary);
     color: var(--color_primary);
-    padding: 60px 0;
+    padding: var(--padding_xxxl) 0;
 
     .home_description--text {
       font-size: var(--fontSize_reg);
-      padding: 5px 0;
+      padding: var(--padding_xs) 0;
     }
   }
 }

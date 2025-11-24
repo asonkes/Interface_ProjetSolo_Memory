@@ -1,5 +1,3 @@
-import { jsonFunction } from "/js/utils/jsonFunction.js";
-
 /*****************************************************/
 /************** Création des personnages *************/
 /*****************************************************/
@@ -7,45 +5,24 @@ import { jsonFunction } from "/js/utils/jsonFunction.js";
 /** On va initialiser les variables que l'on veut */
 const persoContainer = document.querySelector(".persoContainer");
 
-async function createPersonnages() {
-    const data = await jsonFunction();
+/*****************************************************/
+/*** Permet l'affichage statique de Pat Patrouille ***/
+/*****************************************************/
 
-    /** Tableau Pat Patrouille */
-    let tabPatPatrouille = data.cards.patPatrouille;
-    /** Tableau Dora */
-    let tabDora = data.cards.dora;
-    /** Tableau Dino */
-    let tabDino = data.cards.dino;
-
-    if(tabPatPatrouille) {
-        tabPatPatrouille.forEach(element => {
-            persoWrapper(element)
-
-            const title_paPatrouille = document.querySelector(".title2");
-            title_paPatrouille.textContent = `Pat Patrouille`;
-        })
-    }
-    
-    if(tabDora) {
-        tabDora.forEach(element => {
-            persoWrapper(element)
-        })
-    }
-
-    if(tabDino) {
-        tabDino.forEach(element => {
+export function createPersonnages(tabPerso, min = 0, max = 8) {
+    /** Pemret d'afficher les 1ers personnages */
+    if(tabPerso) {
+        tabPerso.slice(min, max).forEach(element => {
             persoWrapper(element);
         })
     }
 }
 
-createPersonnages();
-
 /*************************************************************/
 /** Fonction qui permet de globaliser la création d'éléments */
 /*************************************************************/
 
-function persoWrapper(element) {
+export function persoWrapper(element) {
     const perso = document.createElement("div");
     /** On ajoute une classe */
     perso.classList.add("perso");
@@ -63,6 +40,7 @@ function persoWrapper(element) {
     /** Ici on va créer l'image */
     const img = document.createElement("img");
     img.src = element.image;
+    img.alt = element.alt
 
     /** On va créer le titre */
     const title = document.createElement("p");
@@ -119,7 +97,10 @@ function persoWrapper(element) {
     /** Parent du 'block_image' et du 'block_text' */
     perso.append(block_image, block_text);
     /** Parent de la div 'perso' */
-    persoContainer.appendChild(perso);
+
+    if(persoContainer) {
+        persoContainer.appendChild(perso);
+    }
 }
 
 

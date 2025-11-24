@@ -29,9 +29,9 @@
 
     h1 {
       font-family: var(--font_primary);
-      font-size: 24px;
+      font-size: var(--fontSize_md_xl);
       color: var(--color_primary);
-      padding: 60px 0 40px 0;
+      padding: var(--padding_xxxl) 0 var(--padding_xxl) 0;
     }
   }
 }

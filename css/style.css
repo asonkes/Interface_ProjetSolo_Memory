@@ -28,6 +28,12 @@
 /* import page game, pour les cards */
 @import "./views/game/cards.css";
 
+/* import page scores*/
+@import "./views/trophy/trophy.css";
+
+/* import page contact */
+@import "./views/contact/contact.css";
+
 /*******************************************/
 /* Lien vers fichiers fonts dans le projet */
 /*******************************************/
