@@ -2,44 +2,59 @@
 /*** Permet de voir si les cartes correspondent ******/
 /*****************************************************/
 export function returnCards() {
-  /** On va initialiser chaque "div" */
-  const cardBlock = document.querySelectorAll(".cardBlock"); 
+  const cards = document.querySelectorAll(".cardBlock");
+
+  /** Pour la 1ere card */
   let firstCard = null;
-  console.log(firstCard);
+  /** Pour la 2eme card */
   let secondCard = null;
-  console.log(secondCard);
+  /** déclaré à false, donc si true fonction flipCard ne se fera pas */
+  let lockGame = false;
 
-    cardBlock.forEach((element) => {
-      element.classList.add("active");
+  function flipCard(element) {
+    /** lockBoard return, on sort du jeu */
+    if (lockGame) return;
 
-      element.addEventListener("click", () => {
-        element.classList.add("returnCard");
-        console.log(element.dataset.value);
+    /** si on reclique sur firstCard, on sort de flipCard */
+    if (element === firstCard) return;
+    /** On ajoute la classe pour le flip */
+    element.classList.add("returnCard");
 
-        if (!firstCard) {
-          /** Si aucune carte n'a été cliquée */
-          /**On fait un return car 1ere carte seulement */
-          /** On peut pas encore comparer */
-          firstCard = element;
-          return;
-        }
+    /** Si la carte n'est pas la 1ere */
+    if (!firstCard) {
+      firstCard = element;
+      return;
+    }
 
-        /** Sinon c'ets la 2eme */
-        secondCard = element;
+    /** Pour avoir la 2eme card */
+    secondCard = element;
 
-        if(firstCard.dataset.value === secondCard.dataset.value) {
-          firstCard = null;
-          secondCard = null;
-        } else {
-          /** Si les cartes sont pas les mêmes, on enlève la classe */
-          /** Après un délai, ausinon, la 2eme carte ne se retourne pas */
-          setTimeout(() => {
-              firstCard.classList.remove("returnCard");
-              secondCard.classList.remove("returnCard");
-              firstCard = null;
-              secondCard = null;
-          }, 1000);
-        }
-      })
-    });
+    /** On bloque les clics */
+    lockGame = true;
+
+    if (firstCard.dataset.value === secondCard.dataset.value) {
+      resetCards();
+    } else {
+      /** timeout permet de pouvoir voir la 2eme carte après le clic,
+       * Au sinon classe est remove direct
+       */
+      setTimeout(() => {
+        firstCard.classList.remove("returnCard");
+        secondCard.classList.remove("returnCard");
+
+        resetCards();
+      }, 1000);
+    }
+  }
+
+  cards.forEach(card => {
+    card.classList.add("active");
+    card.addEventListener("click", () => flipCard(card));
+  });
+
+  function resetCards() {
+    firstCard = null;
+    secondCard = null;
+    lockGame = false;
+  }
 }

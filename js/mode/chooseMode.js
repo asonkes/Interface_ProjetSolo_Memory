@@ -1,5 +1,4 @@
 import { mixCards } from "/js/utils/mixCards.js";
-import { jsonFunction } from "/js/utils/jsonFunction.js";
 import { creationBgCards, creationBackCards} from "/js/utils/creationBgCards.js";
 import { returnCards } from "/js/utils/returnCards.js";
 
