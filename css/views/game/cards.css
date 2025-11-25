@@ -58,15 +58,16 @@
           /* perspective se met sur les enfants */
           transform-style: preserve-3d;
           transition: all 1s ease;
+        }
 
-          &:hover {
-            transform: rotateY(180deg);
-          }
+        &.returnCard {
+          transform: rotateY(180deg);
         }
 
         .cardFront,
         .cardBack {
           position: absolute;
+          max-width: var(--width_full);
           width: var(--width_full);
           height: var(--height_full);
           backface-visibility: hidden;
@@ -75,14 +76,13 @@
         }
 
         .cardFront {
-          max-width: 100%;
-          width: 100%;
           object-fit: cover;
         }
 
         .cardBack {
+          object-fit: contain;
           transform: rotateY(180deg);
-          background-color: aquamarine;
+          background-color: var(--color_secondary);
         }
       }
     }

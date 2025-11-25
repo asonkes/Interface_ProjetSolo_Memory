@@ -186,7 +186,7 @@
     {
       "id": 0,
       "nom": "Alicia",
-      "image": "./images/cards/dora/alicia.png",
+      "image": "/images/cards/dora/alicia.png",
       "alt": "Image d'Alicia dans Dora.",
       "description": "Sœur de Diego, experte en informatique et secours animaliers.",
       "phrase_culte": null,
@@ -196,7 +196,7 @@
     {
       "id": 1,
       "nom": "Babouche",
-      "image": "./images/cards/dora/babouche.png",
+      "image": "/images/cards/dora/babouche.png",
       "alt": "Image de Babouche dans Dora.",
       "description": "Singe parlant et compagnon d'aventure de Dora.",
       "phrase_culte": null,
@@ -206,7 +206,7 @@
     {
       "id": 2,
       "nom": "Bebe Jaguar",
-      "image": "./images/cards/dora/bebe-jaguar.png",
+      "image": "/images/cards/dora/bebe-jaguar.png",
       "alt": "Image de bebe Jaguar dans Dora.",
       "description": "Petit jaguar ami de Dora et Diego.",
       "phrase_culte": null,
@@ -216,7 +216,7 @@
     {
       "id": 3,
       "nom": "Chipeur",
-      "image": "./images/cards/dora/chipeur.png",
+      "image": "/images/cards/dora/chipeur.png",
       "alt": "Image de Chipeur dans Dora.",
       "description": "Renard considéré comme le 'méchant' de la série.",
       "phrase_culte": "Oh mince, il est trop tard !",
@@ -226,7 +226,7 @@
     {
       "id": 4,
       "nom": "Diego",
-      "image": "./images/cards/dora/diego.png",
+      "image": "/images/cards/dora/diego.png",
       "alt": "Image de Diego dans Dora.",
       "description": "Demi-cousin de Dora.",
       "phrase_culte": null,
@@ -236,7 +236,7 @@
     {
       "id": 5,
       "nom": "Dora",
-      "image": "./images/cards/dora/dora.png",
+      "image": "/images/cards/dora/dora.png",
       "alt": "Image de Dora.",
       "description": "Aventurière curieuse qui explore le monde avec ses amis.",
       "phrase_culte": null,
@@ -246,7 +246,7 @@
     {
       "id": 6,
       "nom": "Grandma",
-      "image": "./images/cards/dora/grandma.png",
+      "image": "/images/cards/dora/grandma.png",
       "alt": "Image de Grandma dans Dora.",
       "description": "Grand-mère de Dora.",
       "phrase_culte": null,
@@ -256,7 +256,7 @@
     {
       "id": 7,
       "nom": "La Carte",
-      "image": "./images/cards/dora/la-carte.png",
+      "image": "/images/cards/dora/la-carte.png",
       "alt": "Image de la Carte dans Dora.",
       "description": "Carte magique indiquant le chemin à Dora.",
       "phrase_culte": "Dis carte !",
@@ -267,7 +267,7 @@
       "id": 8,
       "nom": "Le Grand Poulet Rouge",
       "alt": "Image du Grand Poulet Rouge dans Dora.",
-      "image": "./images/cards/dora/le-grand-poulet-rouge.png",
+      "image": "/images/cards/dora/le-grand-poulet-rouge.png",
       "description": "Grand poulet rouge qui parle anglais.",
       "phrase_culte": null,
       "role": "Aide Dora et Babouche en donnant des indices.",
@@ -276,7 +276,7 @@
     {
       "id": 9,
       "nom": "Le Train Bleu",
-      "image": "./images/cards/dora/le-train-bleu.png",
+      "image": "/images/cards/dora/le-train-bleu.png",
       "alt": "Image du Train Bleu dans Dora.",
       "description": "Train qui transporte Dora et ses amis.",
       "phrase_culte": null,
@@ -286,7 +286,7 @@
     {
       "id": 10,
       "nom": "Le Trio Fiesta",
-      "image": "./images/cards/dora/le-trio-fiesta.png",
+      "image": "/images/cards/dora/le-trio-fiesta.png",
       "alt": "Image du Trio Fiesta dans Dora.",
       "description": "Trois petits animaux : une sauterelle, un escargot et une grenouille.",
       "phrase_culte": null,
@@ -296,7 +296,7 @@
     {
       "id": 11,
       "nom": "Les Etoiles",
-      "image": "./images/cards/dora/les-etoiles.png",
+      "image": "/images/cards/dora/les-etoiles.png",
       "alt": "Image des Etoiles dans Dora.",
       "description": "Étoiles lumineuses, masculines et féminines.",
       "phrase_culte": null,
@@ -306,7 +306,7 @@
     {
       "id": 12,
       "nom": "Le Lutin Grognon",
-      "image": "./images/cards/dora/lutin-grognon.png",
+      "image": "/images/cards/dora/lutin-grognon.png",
       "alt": "Image du Lutin Grognon dans Dora.",
       "description": "Lutin jaune, toujours de mauvaise humeur.",
       "phrase_culte": null,
@@ -316,7 +316,7 @@
     {
       "id": 13,
       "nom": "Mister Toucan",
-      "image": "./images/cards/dora/mister-toucan.png",
+      "image": "/images/cards/dora/mister-toucan.png",
       "alt": "Image de mister Toucan dans Dora.",
       "description": "Toucan parlant anglais.",
       "phrase_culte": null,
@@ -326,7 +326,7 @@
     {
       "id": 14,
       "nom": "Sac à Dos",
-      "image": "./images/cards/dora/sac-a-dos.png",
+      "image": "/images/cards/dora/sac-a-dos.png",
       "alt": "Image de Sac à Dos dans Dora.",
       "description": "Sac à dos mauve de Dora.",
       "phrase_culte": "Dis sac à dos !",
@@ -336,7 +336,7 @@
     {
       "id": 15,
       "nom": "Tico",
-      "image": "./images/cards/dora/tico.png",
+      "image": "/images/cards/dora/tico.png",
       "alt": "Image de Tico dans Dora.",
       "description": "Écureuil violet ami de Dora, parle espagnol.",
       "phrase_culte": null,
@@ -346,7 +346,7 @@
     {
       "id": 16,
       "nom": "Totor",
-      "image": "./images/cards/dora/totor.png",
+      "image": "/images/cards/dora/totor.png",
       "alt": "Image de Totor dans Dora.",
       "description": "Taureau bleu, bourru mais gentil.",
       "phrase_culte": null,
@@ -356,7 +356,7 @@
     {
       "id": 17,
       "nom": "Vera",
-      "image": "./images/cards/dora/vera.png",
+      "image": "/images/cards/dora/vera.png",
       "alt": "Image de Vera dans Dora.",
       "description": "Iguane verte, coquette et naïve.",
       "phrase_culte": null,
@@ -368,7 +368,7 @@
     {
       "id": 0,
       "nom": "Allosaurus",
-      "image": "./images/cards/dinosaures/allosaurus.png",
+      "image": "/images/cards/dinosaures/allosaurus.png",
       "alt": "Image du dinosaure Allosaurus.",
       "description": "Prédateur bipède possédant de grandes mâchoires et des griffes acérées.",
       "phrase_culte": null,
@@ -378,7 +378,7 @@
       {
       "id": 1,
       "nom": "Ankylosaurus",
-      "image": "./images/cards/dinosaures/ankylosaurus.png",
+      "image": "/images/cards/dinosaures/ankylosaurus.png",
       "alt": "Image du dinosaure Ankylosaurus.",
       "description": "Dinosaure cuirassé doté d'une massue osseuse au bout de la queue.",
       "phrase_culte": null,
@@ -388,7 +388,7 @@
       {
       "id": 2,
       "nom": "Apatosaurus",
-      "image": "./images/cards/dinosaures/apatosaurus.png",
+      "image": "/images/cards/dinosaures/apatosaurus.png",
       "alt": "Image du dinosaure Apatosaurus",
       "description": "Grand sauropode à long cou et à queue puissante.",
       "phrase_culte": null,
@@ -398,7 +398,7 @@
     {
       "id": 3,
       "nom": "Archaeopteryx",
-      "image": "./images/cards/dinosaures/archaeopteryx.png",
+      "image": "/images/cards/dinosaures/archaeopteryx.png",
       "alt": "Image du dinosaure Archaeopteryx.",
       "description": "Fossile de transition entre les dinosaures et les oiseaux.",
       "phrase_culte": null,
@@ -408,7 +408,7 @@
     {
       "id": 4,
       "nom": "Brachiosaurus",
-      "image": "./images/cards/dinosaures/brachiosaurus.png",
+      "image": "/images/cards/dinosaures/brachiosaurus.png",
       "alt": "Image du dinosaure Brachiosaurus.",
       "description": "Immense dinosaure à long cou, l’un des plus grands animaux terrestres connus.",
       "phrase_culte": null,
@@ -418,7 +418,7 @@
       {
       "id": 5,
       "nom": "Dakosaurus",
-      "image": "./images/cards/dinosaures/dakosaurus.png",
+      "image": "/images/cards/dinosaures/dakosaurus.png",
       "alt": "Image du dinosaure Dakosaurus.",
       "description": "Reptile marin prédateur au corps fuselé.",
       "phrase_culte": null,
@@ -428,7 +428,7 @@
       {
       "id": 6,
       "nom": "Dilophosaurus",
-      "image": "./images/cards/dinosaures/dilophosaurus.png",
+      "image": "/images/cards/dinosaures/dilophosaurus.png",
       "alt": "Image du dinosaure Dilophosaurus.",
       "description": "Dinosaure carnivore à deux crêtes osseuses sur la tête.",
       "phrase_culte": null,
@@ -438,7 +438,7 @@
     {
       "id": 7,
       "nom": "Liopleurodon",
-      "image": "./images/cards/dinosaures/liopleurodon.png",
+      "image": "/images/cards/dinosaures/liopleurodon.png",
       "alt": "Image du dinosaure Liopleurodon.",
       "description": "Reptile marin au corps massif et aux puissantes mâchoires.",
       "phrase_culte": null,
@@ -448,7 +448,7 @@
       {
       "id": 8,
       "nom": "Metriohynchus",
-      "image": "./images/cards/dinosaures/metriohynchus.png",
+      "image": "/images/cards/dinosaures/metriohynchus.png",
       "alt": "Image du dinosaure Metriohyncus.",
       "description": "Proche des crocodiles modernes.",
       "phrase_culte": null,
@@ -458,7 +458,7 @@
       {
       "id": 9,
       "nom": "Parasaurolophus",
-      "image": "./images/cards/dinosaures/parasaurolophus.png",
+      "image": "/images/cards/dinosaures/parasaurolophus.png",
       "alt": "Image du dinosaure Parasaurolophus.",
       "description": "Dinosaure herbivore à longue crête tubulaire sur le crâne.",
       "phrase_culte": null,
@@ -468,7 +468,7 @@
     {
       "id": 10,
       "nom": "Plesiosaurus",
-      "image": "./images/cards/dinosaures/plesiosaurus.png",
+      "image": "/images/cards/dinosaures/plesiosaurus.png",
       "alt": "Image du dinosaure Plesiosaurus.",
       "description": "Reptile marin au long cou et aux nageoires puissantes.",
       "phrase_culte": null,
@@ -478,7 +478,7 @@
       {
       "id": 11,
       "nom": "Pterosaur",
-      "image": "./images/cards/dinosaures/pterosaur.png",
+      "image": "/images/cards/dinosaures/pterosaur.png",
       "alt": "Image du dinosaure Pterosaur.",
       "description": "Reptile volant, premier vertébré connu capable de voler activement.",
       "phrase_culte": null,
@@ -488,7 +488,7 @@
       {
       "id": 12,
       "nom": "Rhamphorynchus",
-      "image": "./images/cards/dinosaures/rhamphorynchus.png",
+      "image": "/images/cards/dinosaures/rhamphorynchus.png",
       "alt": "Image du dinosaure Rhamphorunchus.",
       "description": "Petit ptérosaure avec des dents pointues.",
       "phrase_culte": null,
@@ -498,7 +498,7 @@
       {
       "id": 13,
       "nom": "Spinosaurus",
-      "image": "./images/cards/dinosaures/spinosaurus.png",
+      "image": "/images/cards/dinosaures/spinosaurus.png",
       "alt": "Image du dinosaure Spinosaurus.",
       "description": "Grand dinosaure semi-aquatique avec une voile dorsale distinctive.",
       "phrase_culte": null,
@@ -508,7 +508,7 @@
       {
       "id": 14,
       "nom": "Stegosaurus",
-      "image": "./images/cards/dinosaures/stegosaurus.png",
+      "image": "/images/cards/dinosaures/stegosaurus.png",
       "alt": "Image du dinosaure Stegosaurus.",
       "description": "Il avait des plaques osseuses le long du dos et une queue défensive.",
       "phrase_culte": null,
@@ -518,7 +518,7 @@
       {
       "id": 15,
       "nom": "Tyrannosaurus Rex",
-      "image": "./images/cards/dinosaures/t-rex.png",
+      "image": "/images/cards/dinosaures/t-rex.png",
       "alt": "Image du dinosaure Tyrannosaurus Rex.",
       "description": "Prédateur massif à la mâchoire surpuissante et aux bras courts.",
       "phrase_culte": null,
@@ -528,7 +528,7 @@
       {
       "id": 16,
       "nom": "Triceratops",
-      "image": "./images/cards/dinosaures/triceratops.png",
+      "image": "/images/cards/dinosaures/triceratops.png",
       "alt": "Image du dinosaure Triceratops.",
       "description": "Dinosaure herbivore à trois cornes et collerette osseuse.",
       "phrase_culte": null,
@@ -538,7 +538,7 @@
     {
       "id": 17,    
       "nom": "Velociraptor",
-      "image": "./images/cards/dinosaures/velociraptors.png",
+      "image": "/images/cards/dinosaures/velociraptors.png",
       "alt": "Image du dinosaure Velociraptor.",
       "description": "Petit dinosaure agile et rapide, doté de griffes redoutables.",
       "phrase_culte": null,

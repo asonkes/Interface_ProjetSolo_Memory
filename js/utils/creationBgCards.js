@@ -7,28 +7,45 @@ import { jsonFunction } from "/js/utils/jsonFunction.js";
 export function creationBgCards(cardsFront, idImage) {
 
     if(idImage === "img1") {
+        /** On s'occupe du 'front' des cards */
         cardsFront.src = "/images/cards/dora/recto.avif";
         cardsFront.alt = "Recto de la carte du thème Dora.";
     }
 
     if(idImage === "img2") {
+        /** On s'occupe du 'front' des cards */
         cardsFront.src = "/images/cards/patPatrouille/recto.png";
         cardsFront.alt = "Recto de la carte du thème Pat patrouille."
     }
 
     if(idImage === "img3") {
+        /** On s'occupe du 'front' des cards */
         cardsFront.src = "/images/cards/dinosaures/recto.png";
         cardsFront.alt= "Recto de la carte du thème Dinosaures.";
     }
 }
 
-export async function creationBackCards () {
-    const data = await jsonFunction();
-    
-    /** Ici pour le verso */
-    const tabImages = data.cards.dora.image;
-    console.log(tabImages);
+export async function creationBackCards(idImage) {
+    const data = await jsonFunction(); 
+
+    let tab;
+
+    if(idImage === "img1") {
+        /** On s'occupe du 'back' des cards */
+        tab = data.cards.dora.map(card => card.image);
+    }
+
+    if(idImage === "img2") {
+        /** On s'occupe du 'back' des cards */
+        tab = data.cards.patPatrouille.map(card => card.image);
+    }
+
+    if(idImage === "img3") {
+        /** On s'occupe du 'back' des cards */
+        tab = data.cards.dino.map(card => card.image);
+    }
+
+    return tab;
 }
 
-creationBackCards();
 

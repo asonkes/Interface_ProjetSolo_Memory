@@ -1,5 +1,6 @@
 import { mixCards } from "/js/utils/mixCards.js";
-import { creationBgCards } from "/js/utils/creationBgCards.js";
+import { jsonFunction } from "/js/utils/jsonFunction.js";
+import { creationBgCards, creationBackCards} from "/js/utils/creationBgCards.js";
 
 /*****************************************************/
 /******* En fonction du mode, quantité de cards ******/
@@ -56,9 +57,9 @@ buttonEasy.addEventListener("click", () => {
   mixCards(arrayEasy);
 
   /** Pour chaque élément du tableau */
-  arrayEasy.forEach((element) => {
-    creationList(element);
-  });
+  for (let i = 0; i < arrayEasy.length; i++) {
+    creationList(arrayEasy[i]);
+  }
 }) 
 
 buttonMedium.addEventListener("click", () => {
@@ -68,9 +69,9 @@ buttonMedium.addEventListener("click", () => {
   console.log(arrayMedium);
 
   /** Pour chaque élément du tableau */
-  arrayMedium.forEach((element) => {
-    creationList(element);
-  });
+  for (let i = 0; i < arrayMedium.length; i++) {
+    creationList(arrayMedium[i]);
+  }
 })
 
 buttonHard.addEventListener("click", () => {
@@ -80,9 +81,9 @@ buttonHard.addEventListener("click", () => {
   console.log(arrayHard);
 
   /** Pour chaque élément du tableau */
-  arrayHard.forEach((element) => {
-    creationList(element);
-  });
+  for (let i = 0; i < arrayHard.length; i++) {
+    creationList(arrayHard[i]);
+  }
 })
 
 /*********************************/
@@ -104,9 +105,6 @@ if (button) {
     /** On va ajouter une classe sur card */
     card.classList.add("active");
 
-    /** On va initialiser chaque "div" */
-    const cardBlock = document.querySelectorAll(".cardBlock");
-
     /** On va ajouter sur 'cardFront' et 'cardBack', des classes au click */
     const cardFront = document.querySelector(".cardFront");
     const cardBack = document.querySelector(".cardBack");
@@ -114,8 +112,17 @@ if (button) {
     cardFront.classList.add("active");
     cardBack.classList.add("active");
 
+    /** On va initialiser chaque "div" */
+    const cardBlock = document.querySelectorAll(".cardBlock"); 
+    console.log(cardBlock); 
+
     cardBlock.forEach((element) => {
       element.classList.add("active");
+
+      element.addEventListener("click", () => {
+        console.log("j'ai cliqué");
+        element.classList.toggle("returnCard");
+      })
     });
   });
 }
@@ -125,11 +132,13 @@ if (button) {
 /*************************************************************/
 
 /** Fonction pour créer les 'div'  */
-function creationList() {
+async function creationList(value) {
+  const data = await jsonFunction(); 
+
   /** On va créer tous les div (le block parent */
   const cardBlock = document.createElement("div");
   /** On ajoute une 1ère classe 'cardFront' */
-  cardBlock.classList.add("cardBlock")
+  cardBlock.classList.add("cardBlock");
 
   /** On va créer tous les 'front' des cards */
   const cardFront = document.createElement("img");
@@ -144,8 +153,15 @@ function creationList() {
   cardBlock.append(cardFront, cardBack);
   card.append(cardBlock);
 
+  /** Ici on récupère le thème pour de recto des cards */
   let idImage = localStorage.getItem("backgroundId");
   if(idImage && cardFront) {
     creationBgCards(cardFront, idImage);
-    }
+  }
+
+  if(idImage) {
+    /** Ici on s'occupe du back des cards */
+    const backCards = await creationBackCards(idImage);
+    cardBack.src = backCards[value - 1];
+  }
 }

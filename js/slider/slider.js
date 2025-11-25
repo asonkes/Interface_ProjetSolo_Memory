@@ -52,9 +52,13 @@ const title = document.querySelector(".title2");
 
 /** Permet d'afficher le thème par défaut */
 let persoAAfficher  = tabPatPatrouille; 
-title.textContent = `Pat Patrouille`;
-/** On vide persoContainer au cas où */
-persoContainer.innerHTML = "";
+if(title) {
+  title.textContent = `Pat Patrouille`;
+}
+if(persoContainer) {
+  /** On vide persoContainer au cas où */
+  persoContainer.innerHTML = "";
+}
 /** On fait la fonction pour afficher les 8 premiers éléments */
 createPersonnages(persoAAfficher , 0, 8);
 /** Et ici, c'est s'il y a le bouton */
