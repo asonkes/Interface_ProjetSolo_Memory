@@ -1,6 +1,7 @@
 import { mixCards } from "/js/utils/mixCards.js";
 import { jsonFunction } from "/js/utils/jsonFunction.js";
 import { creationBgCards, creationBackCards} from "/js/utils/creationBgCards.js";
+import { returnCards } from "/js/utils/returnCards.js";
 
 /*****************************************************/
 /******* En fonction du mode, quantité de cards ******/
@@ -112,18 +113,7 @@ if (button) {
     cardFront.classList.add("active");
     cardBack.classList.add("active");
 
-    /** On va initialiser chaque "div" */
-    const cardBlock = document.querySelectorAll(".cardBlock"); 
-    console.log(cardBlock); 
-
-    cardBlock.forEach((element) => {
-      element.classList.add("active");
-
-      element.addEventListener("click", () => {
-        console.log("j'ai cliqué");
-        element.classList.toggle("returnCard");
-      })
-    });
+    returnCards();
   });
 }
 
@@ -133,12 +123,13 @@ if (button) {
 
 /** Fonction pour créer les 'div'  */
 async function creationList(value) {
-  const data = await jsonFunction(); 
 
   /** On va créer tous les div (le block parent */
   const cardBlock = document.createElement("div");
   /** On ajoute une 1ère classe 'cardFront' */
   cardBlock.classList.add("cardBlock");
+  /** Ici on met une "value" sur cardBlack */
+  cardBlock.dataset.value = value;
 
   /** On va créer tous les 'front' des cards */
   const cardFront = document.createElement("img");
@@ -159,9 +150,12 @@ async function creationList(value) {
     creationBgCards(cardFront, idImage);
   }
 
+  /** Ici on récupère le thème pour de recto des cards */
   if(idImage) {
     /** Ici on s'occupe du back des cards */
     const backCards = await creationBackCards(idImage);
-    cardBack.src = backCards[value - 1];
+    /** On fait '-1' pour partir de '0' */
+    cardBack.src = backCards.tab[value - 1];
+    cardBack.alt = backCards.alt[value - 1];
   }
 }
