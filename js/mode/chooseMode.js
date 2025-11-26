@@ -106,11 +106,9 @@ if (button) {
     card.classList.add("active");
 
     /** On va ajouter sur 'cardFront' et 'cardBack', des classes au click */
-    const cardFront = document.querySelector(".cardFront");
-    const cardBack = document.querySelector(".cardBack");
 
-    cardFront.classList.add("active");
-    cardBack.classList.add("active");
+    const theme = localStorage.getItem("backgroundId");
+    console.log(theme);
 
     returnCards();
   });
@@ -149,10 +147,10 @@ async function creationList(value) {
     creationBgCards(cardFront, idImage);
   }
 
-  /** Ici on récupère le thème pour de recto des cards */
+  /** Ici on récupère le thème pour le verso des cards */
   if(idImage) {
     /** Ici on s'occupe du back des cards */
-    const backCards = await creationBackCards(idImage);
+    const backCards = await creationBackCards(cardBack, idImage);
     /** On fait '-1' pour partir de '0' */
     cardBack.src = backCards.tab[value - 1];
     cardBack.alt = backCards.alt[value - 1];

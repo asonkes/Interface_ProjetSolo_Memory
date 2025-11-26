@@ -3,7 +3,7 @@
 
 export async function jsonFunction() {
   try {
-        const response=await fetch("/cards.json");
+        const response=await fetch('http://localhost:3000/cards');
         const data=await response.json();
         return data;
     } catch(error) {

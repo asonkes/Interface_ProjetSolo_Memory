@@ -66,23 +66,27 @@
 
         .cardFront,
         .cardBack {
+          max-width: 100%;
+          width: 100%;
           position: absolute;
-          max-width: var(--width_full);
-          width: var(--width_full);
           height: var(--height_full);
           backface-visibility: hidden;
           -webkit-backface-visibility: hidden;
+          cursor: pointer;
           border-radius: 20px;
         }
 
-        .cardFront {
+        .cardBack {
+          transform: rotateY(180deg);
+          background-color: var(--color_secondary);
+        }
+
+        .cover {
           object-fit: cover;
         }
 
-        .cardBack {
+        .contain {
           object-fit: contain;
-          transform: rotateY(180deg);
-          background-color: var(--color_secondary);
         }
       }
     }

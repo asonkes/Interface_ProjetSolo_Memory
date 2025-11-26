@@ -10,22 +10,28 @@ export function creationBgCards(cardsFront, idImage) {
         /** On s'occupe du 'front' des cards */
         cardsFront.src = "/images/cards/dora/recto.avif";
         cardsFront.alt = "Recto de la carte du thème Dora.";
+
+        cardsFront.classList.add("cover");
     }
 
     if(idImage === "img2") {
         /** On s'occupe du 'front' des cards */
         cardsFront.src = "/images/cards/patPatrouille/recto.png";
         cardsFront.alt = "Recto de la carte du thème Pat patrouille."
+
+        cardsFront.classList.add("cover");
     }
 
     if(idImage === "img3") {
         /** On s'occupe du 'front' des cards */
         cardsFront.src = "/images/cards/dinosaures/recto.png";
         cardsFront.alt= "Recto de la carte du thème Dinosaures.";
+
+        cardsFront.classList.add("contain");
     }
 }
 
-export async function creationBackCards(idImage) {
+export async function creationBackCards(cardsBack, idImage) {
     const data = await jsonFunction(); 
 
     let tab;
@@ -33,20 +39,26 @@ export async function creationBackCards(idImage) {
 
     if(idImage === "img1") {
         /** On s'occupe du 'back' des cards */
-        tab = data.cards.dora.map(card => card.image);
-        alt = data.cards.dora.map(card => card.alt);
+        tab = data.dora.map(card => card.image);
+        alt = data.dora.map(card => card.alt);
+
+        cardsBack.classList.add("cover");
     }
 
     if(idImage === "img2") {
         /** On s'occupe du 'back' des cards */
-        tab = data.cards.patPatrouille.map(card => card.image);
-        alt = data.cards.patPatrouille.map(card => card.alt);
+        tab = data.patPatrouille.map(card => card.image);
+        alt = data.patPatrouille.map(card => card.alt);
+
+        cardsBack.classList.add("cover");
     }
 
     if(idImage === "img3") {
         /** On s'occupe du 'back' des cards */
-        tab = data.cards.dino.map(card => card.image);
-        alt = data.cards.dino.map(card => card.alt);
+        tab = data.dino.map(card => card.image);
+        alt = data.dino.map(card => card.alt);
+
+        cardsBack.classList.add("contain");
     }
 
     /** Obligé de faire ça, quand on veut retourner 2 valeurs en JS */

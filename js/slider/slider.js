@@ -34,11 +34,11 @@ const sliderId = ["img1", "img2", "img3"];
 const data = await jsonFunction(); 
 /** Différents tableaux dont on a besoin */
 /** Tableau Pat Patrouille */
-const tabPatPatrouille = data.cards.patPatrouille;
+const tabPatPatrouille = data.patPatrouille;
 /** Tableau Dora */
-const tabDora = data.cards.dora;
+const tabDora = data.dora;
 /** Tableau Dino */
-const tabDino = data.cards.dino;
+const tabDino = data.dino;
 /** On créé un tableau généralavec les autres tableaux */
 const tabThemeAll = [tabDora, tabPatPatrouille, tabDino];
 /** Et on récupère l'élément parent */
