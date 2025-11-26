@@ -88,11 +88,42 @@
     }
   }
 
-  .fullScreen {
-    display: none;
+  .buttonParent {
+    height: 0;
+    opacity: 0;
 
-    @media (max-width: 959px) {
-      display: none;
+    &.active {
+      height: 100%;
+      opacity: 1;
+      transition: all 1s ease-in-out;
+      margin: var(--margin_reg);
+
+      @media (max-width: 560px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: var(--margin_reg);
+      }
+    }
+
+    .replay,
+    .scores {
+      width: 200px;
+      font-family: var(--font_primary);
+      font-size: var(--fontSize_s);
+      font-weight: bold;
+      background-color: var(--color_primary);
+      margin: var(--margin_s);
+      padding: var(--padding_reg);
+      border-radius: 15px;
+      border: none;
+      transition: all 1s ease-in-out;
+      cursor: pointer;
+
+      a {
+        color: var(--color_secondary);
+        text-decoration: none;
+      }
     }
   }
 }

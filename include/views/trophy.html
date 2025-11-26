@@ -17,6 +17,7 @@
 
     <!-- Lien vers le fichier JS -->
     <script src="/js/main.js" type="module"></script>
+    <script src="/js/scores/scores.js" type="module"></script>
 
     <!-- Lien vers 'fontawesome' -->
     <script src="https://kit.fontawesome.com/2cbf82340f.js" crossorigin="anonymous"></script>
@@ -34,35 +35,41 @@
         <div class="trophy">
           <h1 class="text_center">Découvrez vos scores !</h1>
           <div class="trophy_dora flex direction_column">
-            <p class="title">Thème Pat Patrouille :</p>
+            <p class="title">Thème Dora :</p>
             <p>
-              <span aria-label="victoire">🎉​🎉​🎉​ Nombre de parties gagnées :</span>
+              <span aria-label="victoire" id="winDora">🎉​🎉​🎉​ Nombre de partie(s) gagnée(s) :</span>
+              <span class="scoreDora">0</span>
             </p>
             <p>
-              <span aria-label="perte">😭​😭​😭​ Nombre de parties perdues :</span>
+              <span aria-label="perte">😭​😭​😭​ Nombre de partie(s) perdue(s) :</span>
+              <span>0</span>
             </p>
           </div>
           <div class="trophy_patPatrouille flex direction_column">
-            <p class="title">Thème Dora :</p>
+            <p class="title">Thème Pat Patrouille :</p>
             <p>
-              <span aria-label="victoire">🎉​🎉​🎉​ Nombre de parties gagnées :</span>
+              <span aria-label="victoire" id="winPatPatrouille">🎉​🎉​🎉​ Nombre de partie(s) gagnée(s) :</span>
+              <span class="scorePatPatrouille">0</span>
             </p>
             <p>
-              <span aria-label="perte">😭​😭​😭​ Nombre de parties perdues :</span>
+              <span aria-label="perte">😭​😭​😭​ Nombre de partie(s) perdue(s) :</span>
+              <span>0</span>
             </p>
           </div>
           <div class="trophy_dino flex direction_column">
             <p class="title">Thème Dinosaures :</p>
             <p>
-              <span aria-label="victoire">🎉​🎉​🎉​Nombre de parties gagnées :</span>
+              <span aria-label="victoire" id="winDino">🎉​🎉​🎉​Nombre de partie(s) gagnée(s) :</span>
+              <span class="scoreDino">0</span>
             </p>
             <p>
-              <span aria-label="perte">😭​😭​😭​ Nombre de parties perdues :</span>
+              <span aria-label="perte">😭​😭​😭​ Nombre de partie(s) perdue(s) :</span>
+              <span>0</span>
             </p>
           </div>
 
-          <div class="button flex flex_center">
-            <button>Réinitialiser</button>
+          <div class="button flex direction_column align_center">
+            <button id="buttonScore">Réinitialiser</button>
           </div>
         </div>
       </div>

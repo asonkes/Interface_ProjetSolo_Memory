@@ -51,6 +51,11 @@
     }
 
     .button {
+      .warning_text {
+        font-family: var(--font_secondary);
+        color: var(--color_quinary);
+        font-size: var(--fontSize_s);
+      }
       button {
         width: 150px;
         font-family: var(--font_primary);

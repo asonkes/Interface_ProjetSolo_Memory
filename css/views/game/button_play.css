@@ -1,5 +1,5 @@
 /* Fonctionnalités pour le bouton pour lancer le jeu et faire apparaître les cards */
-button {
+#button {
   &.active {
     height: var(--height_full);
     opacity: 1;
