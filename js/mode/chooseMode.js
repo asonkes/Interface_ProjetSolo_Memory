@@ -1,6 +1,7 @@
 import { mixCards } from "/js/utils/mixCards.js";
 import { creationBgCards, creationBackCards} from "/js/utils/creationBgCards.js";
 import { returnCards } from "/js/utils/returnCards.js";
+import { startTimer } from "/js/utils/timer.js";
 
 /*****************************************************/
 /******* En fonction du mode, quantité de cards ******/
@@ -95,8 +96,6 @@ const button = document.getElementById("button");
 /** Evenement au click sur le bouton 'GO' */
 if (button) {
   button.addEventListener("click", () => {
-    /** On ajoute une classe sur cardWrapper */
-    cardWrapper.classList.add("cardWrapper_padding");
     /** Permet de faire disparaitre le bouton */
     button.classList.remove("active");
     /** On va ajouter le parent */
@@ -112,7 +111,14 @@ if (button) {
     cardFront.classList.add("active");
     cardBack.classList.add("active");
 
+    /** On va ajouter une classe à timer pour le faire apparaître */
+    const timerParent = document.querySelector(".timerParent");
+    timerParent.classList.add("active");
+
     returnCards();
+
+    /** On va ajouter le timer */
+    startTimer();
   });
 }
 

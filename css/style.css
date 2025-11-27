@@ -28,6 +28,9 @@
 /* import page game, pour les cards */
 @import "./views/game/cards.css";
 
+/* import page game, pour le timer */
+@import "./views/game/timer.css";
+
 /* import page scores*/
 @import "./views/trophy/trophy.css";
 

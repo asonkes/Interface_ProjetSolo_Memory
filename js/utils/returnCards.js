@@ -1,3 +1,5 @@
+import { stopTimer } from "/js/utils/timer.js";
+
 /*****************************************************/
 /*** Permet de voir si les cartes correspondent ******/
 /*****************************************************/
@@ -16,7 +18,6 @@ export function returnCards() {
   let isCardValid = 0;
   /** On va définir le thème */
   let theme = localStorage.getItem("backgroundId"); 
-  console.log(theme);
   /** Récupération du score de Dora */
   let scoreDora = localStorage.getItem("scoreDora") 
   /** Récupération du score de patPatrouille */
@@ -50,6 +51,9 @@ export function returnCards() {
       console.log("Nombre de cartes trouvées", isCardValid);
 
       if(isCardValid === ((cardBlock.length) / 2)) {
+
+        /** On arrête le timer quand toutes les cartes sont trouvées */
+        stopTimer();
 
         if(theme === "img1") {
           console.log("j'ai cliqué sur dora");
