@@ -1,10 +1,15 @@
 header {
   width: var(--width_full);
-  height: 65px;
+  min-height: 65px;
   background-color: var(--color_primary);
   position: fixed;
   padding: var(--padding_xs) 0;
   z-index: 999999;
+
+  @media (prefers-color-scheme: light) {
+    background-color: var(--color_secondary);
+    border: 2px solid var(--color_primary);
+  }
 
   .logo {
     width: 3.125rem;
@@ -29,6 +34,13 @@ header {
         height: calc(100vh - 103px);
         background-color: var(--color_primary);
         transition: all 1s ease-in-out;
+
+        @media (prefers-color-scheme: light) {
+          top: 60px;
+          height: calc(100vh - 103px);
+          background-color: var(--color_secondary);
+          border: 1px solid var(--color_primary);
+        }
 
         @media (max-width: 700px) {
           width: var(--width_medium);
@@ -61,21 +73,39 @@ header {
         &:focus {
           background-color: var(--color_tertiary);
           transform: scale(1.02);
+
+          @media (prefers-color-scheme: light) {
+            background-color: rgba(62, 114, 178, 0.4);
+          }
         }
 
         &.active {
           background-color: var(--color_tertiary);
+
+          @media (prefers-color-scheme: light) {
+            background-color: rgba(62, 114, 178, 0.4);
+          }
         }
 
         @media (max-width: 959px) {
           width: var(--width_full);
           border: 1px solid white;
+
+          @media (prefers-color-scheme: light) {
+            background-color: var(--color_secondary);
+            border: 1px solid var(--color_primary);
+          }
         }
 
         a {
           max-width: var(--width_full);
           color: var(--color_secondary);
           text-decoration: none;
+
+          @media (prefers-color-scheme: light) {
+            color: var(--color_primary);
+            font-weight: bold;
+          }
 
           @media (max-width: 959px) {
             padding: var(--padding_s);
@@ -93,6 +123,58 @@ header {
             font-size: var(--fontSize_xs);
             padding: var(--padding_xs);
           }
+        }
+
+        #dark {
+          width: var(--width_full);
+          height: var(--height_full);
+          position: absolute;
+          top: 0;
+          left: 0;
+          opacity: 1;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          transition: all 0.5s ease-in-out;
+
+          &.active {
+            height: 0;
+            opacity: 0;
+          }
+        }
+
+        #light {
+          height: 0;
+          opacity: 0;
+
+          &.active {
+            width: var(--width_full);
+            height: var(--height_full);
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.5s ease-in-out;
+          }
+        }
+      }
+
+      #dark_light {
+        position: relative;
+        min-width: 55px;
+        min-height: 55px;
+        display: flex;
+        align-items: center;
+        font-size: 26px;
+        color: var(--color_secondary);
+        cursor: pointer;
+
+        @media (max-width: 959px) {
+          min-width: 89px;
+          min-height: 89px;
         }
       }
     }
@@ -121,6 +203,10 @@ header {
       border-radius: 2px;
       background-color: var(--color_secondary);
       transition: all 0.5s ease;
+
+      @media (prefers-color-scheme: light) {
+        background-color: var(--color_primary);
+      }
     }
 
     #span1 {
@@ -139,6 +225,54 @@ header {
       &.active {
         transform: rotate(-45deg) translate(8px, -8px);
       }
+    }
+  }
+}
+
+/* Theme light */
+body.light header {
+  background-color: var(--color_secondary);
+  border: 2px solid var(--color_primary);
+
+  nav {
+    &.active {
+      top: 60px;
+      height: calc(100vh - 103px);
+      background-color: var(--color_secondary);
+      border: 1px solid var(--color_primary);
+    }
+
+    ul {
+      li {
+        &:hover,
+        &:focus {
+          background-color: rgba(62, 114, 178, 0.4);
+        }
+
+        &.active {
+          background-color: rgba(62, 114, 178, 0.4);
+        }
+
+        @media (max-width: 959px) {
+          background-color: var(--color_secondary);
+          border: 1px solid var(--color_primary);
+        }
+
+        a {
+          color: var(--color_primary);
+          font-weight: bold;
+        }
+      }
+
+      #dark_light {
+        color: var(--color_primary);
+      }
+    }
+  }
+
+  .burger_icon {
+    span {
+      background-color: var(--color_primary);
     }
   }
 }

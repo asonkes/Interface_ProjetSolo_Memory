@@ -1,4 +1,5 @@
 import { initBurger } from "./partials/icon_burger.js";
+import { darkLight } from "./partials/dark_light.js";
 
 /************************************************************************************/
 /** Fonction pour que le header et le footer puisse se répéter sur toutes les pages */
@@ -26,6 +27,9 @@ function loadHTML(selector, url, callback) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  loadHTML("header", "/include/partials/header.html", initBurger);
+  loadHTML("header", "/include/partials/header.html", () => {
+    initBurger()
+    darkLight()
+  });
   loadHTML("footer", "/include/partials/footer.html");
 });

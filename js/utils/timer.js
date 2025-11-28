@@ -7,9 +7,7 @@
 /** Le timer s'arretera qd la partie est finie (pas nécessaire d'avoir un bouton "stop") */
 
 /** On récupère les variables dont on a besoin */
-const heures_container = document.getElementById("heures");
-const minutes_container = document.getElementById("minutes");
-const secondes_container = document.getElementById("secondes");
+const counter = document.getElementById("counter");
 
 let heures = 0;
 let minutes = 0;
@@ -73,9 +71,7 @@ function isGoingTime() {
 
     /** On va intégrer les valeurs */
     /** Les heures */
-    heures_container.textContent = `${heures}`;
-    minutes_container.textContent = `${minutes}`;
-    secondes_container.textContent = `${secondes}`;
+    counter.textContent = `${heures} : ${minutes} : ${secondes}`;
 
     /** On veut que 'isGoingTime' se déclenche toutes les secondes(1000ms) */
     setTimeout(isGoingTime, 1000);

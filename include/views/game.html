@@ -48,27 +48,18 @@
           </div>
         </div>
         <div class="game_card flex">
-          <!-- partie pour le timer -->
-          <div class="timerParent container">
-            <h2 class="text_center" aria-label="chronomètre">Jouez, attention le chronomètre commence ⏳​⏳​⏳​ !!!</h2>
-            <div class="timer flex flex_center">
-              <div class="timer_counter flex direction_column text_center">
-                <span class="counter" id="heures">00</span>
-                <span>heures</span>
-              </div>
-              <div class="timer_counter flex direction_column text_center">
-                <span class="counter" id="minutes">00</span>
-                <span>Minutes</span>
-              </div>
-              <div class="timer_counter flex direction_column text_center">
-                <span class="counter" id="secondes">00</span>
-                <span>Secondes</span>
-              </div>
-            </div>
-          </div>
-
           <!-- Partie pour les cards -->
           <div class="card_wrapper container flex flex_center direction_column align_center">
+            <!-- partie pour le timer -->
+            <div class="timerParent">
+              <h2 class="text_center" aria-label="chronomètre">
+                Jouez, attention le chronomètre commence ⏳​⏳​⏳​ !!!
+              </h2>
+              <div class="timer flex flex_center">
+                <div class="counter" id="counter">00 : 00 : 00</div>
+              </div>
+            </div>
+
             <div class="card flex align_center flex_center"></div>
 
             <div class="buttonParent">
