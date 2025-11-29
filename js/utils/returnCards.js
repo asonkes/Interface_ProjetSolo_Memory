@@ -77,7 +77,7 @@ export function returnCards() {
         /** Et on va ajouter un texte pour dire "bravo", vous avez gagné */
         const textFinish = document.createElement("p");
         textFinish.classList.add("textFinish", "container");
-        textFinish.textContent = `Félicitaions, vous venez de remporter votre partie !!! Vous être un(e) vrai(e) champion(ne) 🌟​🌟​🌟​`;
+        textFinish.textContent = `Félicitations, vous venez de remporter votre partie !!! Tu es un(e) vrai(e) champion(ne) 🌟​🌟​🌟​`;
         cardBlock.insertAdjacentElement("afterend", textFinish);
 
         /** On arrête le timer quand toutes les cartes sont trouvées */

@@ -31,13 +31,14 @@
         width: var(--width_full);
         height: var(--height_full);
         opacity: 1;
-        background-color: rgba(238, 191, 165, 0.6);
+        background-color: rgba(255, 255, 255, 0.6);
         border-radius: 20px;
         flex-wrap: wrap;
         list-style: none;
         gap: 2rem;
         padding: var(--padding_xxxxl);
-        border: 1px solid var(--color_primary);
+        border: 2px solid var(--color_secondary);
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 
         @media (max-width: 500px) {
           gap: 1rem;
@@ -45,7 +46,7 @@
       }
 
       &.finish {
-        filter: blur(1rem);
+        filter: blur(1.5rem);
       }
 
       .cardBlock {
@@ -99,7 +100,7 @@
       top: 50%;
       text-align: center;
       font-family: var(--font_primary);
-      font-size: var(--fontSize_xxl);
+      font-size: var(--fontSize_l);
       font-weight: bold;
       background-color: rgba(46, 64, 87, 0.8);
       color: var(--color_secondary);
