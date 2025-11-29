@@ -55,13 +55,22 @@
               <h2 class="text_center" aria-label="chronomètre">
                 Jouez, attention le chronomètre commence ⏳​⏳​⏳​ !!!
               </h2>
-              <div class="timer flex flex_center">
+
+              <div class="timer flex">
+                <!-- Bouton mute pour arrêter le son si carte les mêmes ok -->
+                <div class="button_sound">Son ok !!!</div>
+
                 <div class="counter" id="counter">00 : 00 : 00</div>
+
+                <!-- Bouton mute pour arrêter le son si carte les mêmes ok -->
+                <div class="button_mute">Mute</div>
               </div>
             </div>
 
+            <!-- Ici se sont les cards -->
             <div class="card flex align_center flex_center"></div>
 
+            <!-- Ici se sont les boutons qui appraissent qd partie terminée -->
             <div class="buttonParent">
               <button class="replay" id="replay">
                 <a href="/index.html">Rejouer</a>

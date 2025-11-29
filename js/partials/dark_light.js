@@ -9,7 +9,7 @@ export function darkLight() {
     const light = document.getElementById("light");
     const body = document.querySelector("body");
 
-    dark.addEventListener("click", (event) => {
+    light.addEventListener("click", (event) => {
         event.preventDefault();
 
         dark.classList.add("active");
@@ -18,7 +18,7 @@ export function darkLight() {
         body.classList.add("light");
     })
 
-    light.addEventListener("click", (event) => {
+    dark.addEventListener("click", (event) => {
         event.preventDefault();
 
         dark.classList.remove("active");

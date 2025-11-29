@@ -115,6 +115,13 @@ if (button) {
     const timerParent = document.querySelector(".timerParent");
     timerParent.classList.add("active");
 
+    /** On va faire appraître le bouton "sound" et le bouton "mute" */
+    const button_mute = document.querySelector(".button_mute");
+    button_mute.classList.add("active");
+
+    const button_sound = document.querySelector(".button_sound");
+    button_sound.classList.add("active");
+
     returnCards();
 
     /** On va ajouter le timer */
@@ -151,8 +158,8 @@ async function creationList(value) {
 
   /** Ici on récupère le thème pour de recto des cards */
   let idImage = localStorage.getItem("backgroundId");
-  if(idImage && cardFront) {
-    creationBgCards(cardFront, idImage);
+  if(idImage && cardFront && cardBack) {
+    creationBgCards(cardFront, cardBack, idImage);
   }
 
   /** Ici on récupère le thème pour de recto des cards */

@@ -1,4 +1,5 @@
 import { stopTimer } from "/js/utils/timer.js";
+import { playSound } from "/js/utils/playSound.js";
 
 /*****************************************************/
 /*** Permet de voir si les cartes correspondent ******/
@@ -46,51 +47,78 @@ export function returnCards() {
     /** On bloque les clics */
     lockGame = true;
 
+    /** Ca c'est la partie qd 1 carte = 1 carte (paaire de carte trouvée) */
     if (firstCard.dataset.value === secondCard.dataset.value) {
+      /** On rajoute +1 au nombre de paire trouvée */
       isCardValid++;
-      console.log("Nombre de cartes trouvées", isCardValid);
 
+        /** On va lancer les différents sons par thème */
+        /** Si thème Dora */
+        if(theme === "img1") {
+          playSound("/sounds/dora_sound.wav");
+        }
+
+        /** Si thème Pat Patrouille */
+        if(theme === "img2") {
+          playSound("/sounds/patPatrouille_sound.wav");
+        }
+
+        /** Si thème Dinosaures */
+        if(theme === "img3") {
+          playSound("/sounds/dino_sound.mp3");
+        }
+
+      /** Quand le nombre de cartes trouvées = nombre de cartes existantes / 2 */
       if(isCardValid === ((cardBlock.length) / 2)) {
+        /** On va flouter les cards */
+        const cardBlock = document.querySelector(".card");
+        cardBlock.classList.add("finish");
+
+        /** Et on va ajouter un texte pour dire "bravo", vous avez gagné */
+        const textFinish = document.createElement("p");
+        textFinish.classList.add("textFinish", "container");
+        textFinish.textContent = `Félicitaions, vous venez de remporter votre partie !!! Vous être un(e) vrai(e) champion(ne) 🌟​🌟​🌟​`;
+        cardBlock.insertAdjacentElement("afterend", textFinish);
 
         /** On arrête le timer quand toutes les cartes sont trouvées */
         stopTimer();
 
+        /** Si thème = Dora */
         if(theme === "img1") {
-          console.log("j'ai cliqué sur dora");
-
+          /** Partie gagnées +1 */
           isWin++;
-          console.log("Nombre de parties gagnées :", isWin);
-
+          /** S'il y a déjà un nombre enregistré en localstorage pour ce thème */
           if(scoreDora) {
+            /** On reprend ce nombre et on rajoute +1 */
             scoreDora = localStorage.getItem("scoreDora") + isWin++;
           }
-          
+          /** Et on envoie la nouvelle valeur */
           scoreDora = localStorage.setItem("scoreDora", isWin);
         }
 
+        /** Si theme = pat Patrouille */
         if(theme === "img2") {
-          console.log("j'ai cliqué sur PatPatrouille");
-
+          /** Partie gagnées +1 */
           isWin++;
-          console.log("Nombre de parties gagnées :", isWin);
-
+          /** S'il y a déjà un nombre enregistré en localstorage pour ce thème */
           if(scorePatPatrouille) {
+            /** On reprend ce nombre et on rajoute +1 */
             scorePatPatrouille = localStorage.getItem("scorePatrouille") + isWin++;
           }
-          
+          /** Et on envoie la nouvelle valeur */
           scorePatPatrouille = localStorage.setItem("scorePatrouille", isWin);
         }
 
+        /** Si thème est Dinosaures */
         if(theme === "img3") {
-          console.log("j'ai cliqué sur Dino");
-
+          /** Partie gagnées +1 */
           isWin++;
-          console.log("Nombre de parties gagnées :", isWin);
-
+          /** S'il y a déjà un nombre enregistré en localstorage pour ce thème */
           if(scoreDino) {
+            /** On reprend ce nombre et on rajoute +1 */
             scoreDino = localStorage.getItem("scoreDino") + isWin++;
           }
-          
+          /** Et on envoie la nouvelle valeur */
           scoreDino = localStorage.setItem("scoreDino", isWin);
         }
 

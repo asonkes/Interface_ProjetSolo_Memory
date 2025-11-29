@@ -8,7 +8,6 @@
     font-family: var(--font_primary);
     font-size: var(--fontSize_reg);
     padding-bottom: var(--padding_xxxxl);
-    border: 4px solid red;
   }
 
   h2 {
@@ -16,6 +15,7 @@
   }
 
   .timer {
+    justify-content: space-around;
     border: 4px solid orange;
 
     .counter {

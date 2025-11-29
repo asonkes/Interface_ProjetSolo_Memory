@@ -37,6 +37,9 @@
 /* import page contact */
 @import "./views/contact/contact.css";
 
+/* import page home bouton 'mute' */
+@import "./views/game/button_mute.css";
+
 /*******************************************/
 /* Lien vers fichiers fonts dans le projet */
 /*******************************************/

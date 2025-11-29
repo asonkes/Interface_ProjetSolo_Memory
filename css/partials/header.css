@@ -124,8 +124,19 @@ header {
             padding: var(--padding_xs);
           }
         }
+      }
 
-        #dark {
+      #dark_light {
+        position: relative;
+        min-width: 55px;
+        min-height: 55px;
+        display: flex;
+        align-items: center;
+        font-size: 26px;
+        color: var(--color_secondary);
+        cursor: pointer;
+
+        #light {
           width: var(--width_full);
           height: var(--height_full);
           position: absolute;
@@ -138,12 +149,14 @@ header {
           transition: all 0.5s ease-in-out;
 
           &.active {
+            width: 0;
             height: 0;
             opacity: 0;
           }
         }
 
-        #light {
+        #dark {
+          width: 0;
           height: 0;
           opacity: 0;
 
@@ -159,22 +172,6 @@ header {
             align-items: center;
             transition: all 0.5s ease-in-out;
           }
-        }
-      }
-
-      #dark_light {
-        position: relative;
-        min-width: 55px;
-        min-height: 55px;
-        display: flex;
-        align-items: center;
-        font-size: 26px;
-        color: var(--color_secondary);
-        cursor: pointer;
-
-        @media (max-width: 959px) {
-          min-width: 89px;
-          min-height: 89px;
         }
       }
     }
