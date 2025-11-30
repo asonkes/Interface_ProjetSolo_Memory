@@ -1,5 +1,5 @@
 import { stopTimer } from "/js/utils/timer.js";
-import { playSound } from "/js/utils/playSound.js";
+import { startPlaySound } from "/js/utils/playSound.js";
 
 /*****************************************************/
 /*** Permet de voir si les cartes correspondent ******/
@@ -55,17 +55,17 @@ export function returnCards() {
         /** On va lancer les différents sons par thème */
         /** Si thème Dora */
         if(theme === "img1") {
-          playSound("/sounds/dora_sound.wav");
+          startPlaySound("/sounds/dora_sound.wav");
         }
 
         /** Si thème Pat Patrouille */
         if(theme === "img2") {
-          playSound("/sounds/patPatrouille_sound.wav");
+          startPlaySound("/sounds/patPatrouille_sound.wav");
         }
 
         /** Si thème Dinosaures */
         if(theme === "img3") {
-          playSound("/sounds/dino_sound.mp3");
+          startPlaySound("/sounds/dino_sound.mp3");
         }
 
       /** Quand le nombre de cartes trouvées = nombre de cartes existantes / 2 */
@@ -75,9 +75,9 @@ export function returnCards() {
         cardBlock.classList.add("finish");
 
         /** Et on va ajouter un texte pour dire "bravo", vous avez gagné */
-        const textFinish = document.createElement("p");
-        textFinish.classList.add("textFinish", "container");
-        textFinish.textContent = `Félicitations, vous venez de remporter votre partie !!! Tu es un(e) vrai(e) champion(ne) 🌟​🌟​🌟​`;
+        const textFinish = document.createElement("div");
+        textFinish.classList.add("textFinish");
+        textFinish.textContent = `Félicitations !!!​`;
         cardBlock.insertAdjacentElement("afterend", textFinish);
 
         /** On arrête le timer quand toutes les cartes sont trouvées */
@@ -85,6 +85,18 @@ export function returnCards() {
 
         /** Si thème = Dora */
         if(theme === "img1") {
+          /** On va ajouter une image en fonction du texte */
+          const img = document.createElement("img");
+          img.src = `/images/cards/dora/dora.png`;
+          img.alt = `Image de Dora.`;
+
+          const text = document.createElement("p");
+          text.textContent = `Tu viens de remporter une partie🏆​ !!!`;
+
+          const text2 = document.createElement("p");
+          text2.textContent = `Tu es une(e) véritable champio(ne) 🌟​.`;
+          textFinish.append(img, text, text2);
+
           /** Partie gagnées +1 */
           isWin++;
           /** S'il y a déjà un nombre enregistré en localstorage pour ce thème */
@@ -98,6 +110,19 @@ export function returnCards() {
 
         /** Si theme = pat Patrouille */
         if(theme === "img2") {
+          /** On va ajouter une image en fonction du texte */
+          const img = document.createElement("img");
+          img.src = `/images/cards/patPatrouille/chase.png`;
+          img.alt = `Image de chase dans Pat Patrouille`;
+
+          const text = document.createElement("p");
+          text.textContent = `Tu viens de remporter une partie🏆​ !!!`;
+          
+          const text2 = document.createElement("p");
+          text2.textContent = `Tu es une(e) véritable champio(ne) 🌟​.`;
+
+          textFinish.append(img, text, text2);
+
           /** Partie gagnées +1 */
           isWin++;
           /** S'il y a déjà un nombre enregistré en localstorage pour ce thème */
@@ -111,6 +136,18 @@ export function returnCards() {
 
         /** Si thème est Dinosaures */
         if(theme === "img3") {
+          /** On va ajouter une image en fonction du texte */
+          const img = document.createElement("img");
+          img.src = `/images/cards/patPatrouille/triceratops.png`;
+          img.alt = `Image d'un triceratops.`;
+          
+          const text = document.createElement("p");
+          text.textContent = `Tu viens de remporter une partie🏆​ !!!`;
+
+          const text2 = document.createElement("p");
+          text2.textContent = `Tu es une(e) véritable champio(ne) 🌟​.`;
+          textFinish.append(img, text, text2);
+
           /** Partie gagnées +1 */
           isWin++;
           /** S'il y a déjà un nombre enregistré en localstorage pour ce thème */

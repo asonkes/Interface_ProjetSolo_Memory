@@ -43,11 +43,14 @@ function scores() {
         localStorage.clear();
 
         /** On va créer un élément pour avertir que le localStrorage est bien réinitialisé */
-        const warning_text = document.createElement("p");
-        warning_text.classList.add("warning_text");
-        warning_text.textContent = `Vos scores ont bien été réinitialisé !!!`;
+        let warning_text = document.querySelector(".warning_text");
 
-        buttonScore.insertAdjacentElement("beforebegin", warning_text);
+        if(!warning_text) {
+            warning_text = document.createElement("p");
+            warning_text.classList.add("warning_text");
+            warning_text.textContent = `Vos scores ont bien été réinitialisé !!!`;
+            buttonScore.insertAdjacentElement("beforebegin", warning_text);
+        }
     })
 }
 

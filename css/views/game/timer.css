@@ -16,7 +16,6 @@
 
   .timer {
     justify-content: space-around;
-    border: 4px solid orange;
 
     .counter {
       font-family: var(--font_secondary);

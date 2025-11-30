@@ -2,6 +2,7 @@ import { mixCards } from "/js/utils/mixCards.js";
 import { creationBgCards, creationBackCards} from "/js/utils/creationBgCards.js";
 import { returnCards } from "/js/utils/returnCards.js";
 import { startTimer } from "/js/utils/timer.js";
+import { stopPlaySound, reactiveSound } from "/js/utils/playSound.js";
 
 /*****************************************************/
 /******* En fonction du mode, quantité de cards ******/
@@ -118,9 +119,15 @@ if (button) {
     /** On va faire appraître le bouton "sound" et le bouton "mute" */
     const button_mute = document.querySelector(".button_mute");
     button_mute.classList.add("active");
+    button_mute.addEventListener("click", () => {
+      stopPlaySound();
+    })
 
     const button_sound = document.querySelector(".button_sound");
     button_sound.classList.add("active");
+    button_sound.addEventListener("click", () => {
+      reactiveSound();
+    })
 
     returnCards();
 

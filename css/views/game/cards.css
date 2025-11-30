@@ -47,6 +47,7 @@
 
       &.finish {
         filter: blur(1.5rem);
+        transition: all 1s ease;
       }
 
       .cardBlock {
@@ -62,7 +63,7 @@
           display: flex;
           /* perspective se met sur les enfants */
           transform-style: preserve-3d;
-          transition: all 1s ease;
+          transition: all 0.5s ease-in-out;
         }
 
         &.returnCard {
@@ -98,15 +99,29 @@
     .textFinish {
       position: absolute;
       top: 50%;
-      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       font-family: var(--font_primary);
-      font-size: var(--fontSize_l);
+      font-size: var(--fontSize_xxl);
       font-weight: bold;
       background-color: rgba(46, 64, 87, 0.8);
       color: var(--color_secondary);
-      margin-top: -40px;
+      margin-top: -80px;
       padding: var(--padding_xxl);
       border-radius: 10px;
+
+      img {
+        max-width: 100px;
+        width: 100px;
+        object-fit: cover;
+      }
+
+      p {
+        font-size: var(--fontSize_md);
+        padding: var(--padding_xs);
+      }
     }
   }
 
@@ -136,15 +151,23 @@
       font-weight: bold;
       background-color: var(--color_primary);
       margin: var(--margin_s);
-      padding: var(--padding_reg);
       border-radius: 15px;
       border: none;
       transition: all 1s ease-in-out;
       cursor: pointer;
 
+      @media (max-width: 680px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
       a {
+        display: block;
+        width: 100%;
         color: var(--color_secondary);
         text-decoration: none;
+        padding: var(--padding_reg);
       }
     }
   }
