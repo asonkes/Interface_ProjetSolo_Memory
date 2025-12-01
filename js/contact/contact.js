@@ -1,8 +1,10 @@
+import { contactInformations } from "/js/utils/jsonFunction.js";
+
 /*****************************************************/
 /***** Permet de contrôler les input required  *******/
 /*****************************************************/
 
-function contact() {
+export function contact() {
   /** Récupérer les variables dont on a besoin */
   const form = document.getElementById("form");
   let input_name = document.getElementById("name");
@@ -15,17 +17,49 @@ function contact() {
   let isValid = true;
 
   /** Quand */
-  form.addEventListener("submit", (event) => {
+  /** On met 'async' pour faire fonctionner le 'await' */
+  form.addEventListener("submit", async (event) => {
     event.preventDefault();
 
-    if (!input_name.value === "") {
+    /** Ici si l'input n'est plus vide... */
+    if (input_name.value != "") {
       let errorName = document.querySelector(".errorName");
-      errorName.remove();
+      if(errorName) {
+        errorName.remove();
+      }
+    }
+
+    if (input_lastName.value != "") {
+      let errorLastname = document.querySelector(".errorLastname");
+      if(errorLastname) {
+        errorLastname.remove();
+      }
+    }
+
+    if (input_email.value != "") {
+      let errorEmail = document.querySelector(".errorEmail");
+      if(errorEmail) {
+        errorEmail.remove();
+      }
+    }
+
+    if (input_password.value != "") {
+      let errorPassword = document.querySelector(".errorPassword");
+      if(errorPassword) {
+        errorPassword.remove();
+      }
+    }
+
+    if (textarea_message.value != "") {
+      let errorTextarea = document.querySelector(".errorTextarea");
+      if(errorTextarea) {
+        errorTextarea.remove();
+      }
     }
 
     /** Ici on va vérifier si les champs sont vides et ajouter le message d'erreur */
     if (input_name.value === "") {
-      isValid === false;
+      isValid = false;
 
       let errorName = document.querySelector(".errorName");
 
@@ -87,29 +121,42 @@ function contact() {
     }
 
     /** Définir la longueur pour le textarea */
-    let errorTextarea = document.querySelector(".errorTextarea");
-    if (errorTextarea) {
-      if (textarea_message.value.length > 255) {
-        let errorTextarea = document.querySelector(".errorTextarea");
-        if (!errorTextarea) {
-          isValid = false;
+    let errorMessage = document.querySelector(".errorMessage");
+    if (textarea_message.value.length > 255) {
+      errorMessage.remove();
+      
+      isValid = false;
 
-          errorTextarea = document.createElement("span");
-          errorTextarea.classList.add("error", "errorTextarea");
-          errorTextarea.textContent = `Votre message ne peut dépasser 255 caractères.`;
-          errorTextarea.insertAdjacentElement("beforebegin", errorTextarea);
-        }
+      let errorTextarea = document.querySelector(".errorTextarea");
+      if (!errorTextarea) {
+        errorTextarea = document.createElement("span");
+        errorTextarea.classList.add("error", "errorTextarea");
+        errorTextarea.textContent = `Votre message ne peut dépasser 255 caractères.`;
+        textarea_message.insertAdjacentElement("beforebegin", errorTextarea);
       }
+    } else {
+      let errorTextarea = document.querySelector(".errorTextarea");
+      if (errorTextarea) errorTextarea.remove();
     }
 
     /** Si tout est valide, on envoie les données */
     if (isValid) {
-      //form.submit();
-      console.log(input_name.value);
-      console.log(input_lastName.value);
-      console.log(input_email.value);
-      console.log(input_password.value);
-      console.log(textarea_message.value);
+      /** On va récupérer les données de mon formulaires, les mettre dans un objet JS */
+      const data = {
+        name : input_name.value,
+        lastname : input_lastName.value,
+        email : input_email.value,
+        password : input_password.value,
+        message : textarea_message.value
+      }
+
+      /** Mais pour pouvoir envoyer ses données au serveur, il faut les transformer en json */
+      await contactInformations(data); // <-- on envoie les données ici
+      /** On vide les champos du formulaire */
+      form.reset();
+      input_email.value = "";
+      input_password.value = "";
+      console.log("Message envoyé !");
     }
   });
 }
