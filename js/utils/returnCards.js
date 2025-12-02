@@ -94,7 +94,7 @@ export function returnCards() {
           text.textContent = `Tu viens de remporter une partie🏆​ !!!`;
 
           const text2 = document.createElement("p");
-          text2.textContent = `Tu es une(e) véritable champio(ne) 🌟​.`;
+          text2.textContent = `Tu es une(e) véritable champion(ne) 🌟​.`;
           textFinish.append(img, text, text2);
 
           /** Partie gagnées +1 */
@@ -119,7 +119,7 @@ export function returnCards() {
           text.textContent = `Tu viens de remporter une partie🏆​ !!!`;
 
           const text2 = document.createElement("p");
-          text2.textContent = `Tu es une(e) véritable champio(ne) 🌟​.`;
+          text2.textContent = `Tu es une(e) véritable champion(ne) 🌟​.`;
 
           textFinish.append(img, text, text2);
 
@@ -146,7 +146,7 @@ export function returnCards() {
           text.textContent = `Tu viens de remporter une partie🏆​ !!!`;
 
           const text2 = document.createElement("p");
-          text2.textContent = `Tu es une(e) véritable champio(ne) 🌟​.`;
+          text2.textContent = `Tu es une(e) véritable champion(ne) 🌟​.`;
           textFinish.append(img, text, text2);
 
           /** Partie gagnées +1 */
