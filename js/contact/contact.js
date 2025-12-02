@@ -21,6 +21,8 @@ export function contact() {
     event.preventDefault();
 
     /** Ici si l'input n'est plus vide... */
+    //let errors = document.querySelectorAll('.error')
+
     if (input_name.value != "") {
       let errorName = document.querySelector(".errorName");
       if (errorName) {
@@ -56,7 +58,24 @@ export function contact() {
       }
     }
 
+    if (textarea_message.value != "") {
+      let errorMessage = document.querySelector(".errorMessage");
+      if (errorMessage) {
+        errorMessage.remove();
+      }
+    }
+
     /** Ici on va vérifier si les champs sont vides et ajouter le message d'erreur */
+    // let inputs = document.querySelectorAll('input')
+    // pour chaque input s'il est vide créer span et ajouter
+    // errors = {
+    //     "name" : {
+    //           "class" : "errorName",
+    //           "text" : "Votre nom est manquant !"
+    //      },
+    //      "lastname" : pareil
+    // }
+
     if (input_name.value === "") {
       isValid = false;
 
