@@ -23,15 +23,21 @@ const sliderImage = [
 const sliderText = [
   "Image de Dora et de Babouche",
   "Image de toute l'équipe de PatPatrouille",
-  "Image de plusieurs dinosaures"
-]
+  "Image de plusieurs dinosaures",
+];
 /** On récupère l'id */
 const sliderId = ["img1", "img2", "img3"];
+
+// const slider = [
+//        { id : "img1", url : "", txt : "" },
+//        { id : "img2", url : "", txt : ""},
+//        { id : "img3", url : "", txt : ""}
+// ]
 
 /*****************************************************/
 /********** Affichage différents personnages *********/
 /*****************************************************/
-const data = await jsonFunction(); 
+const data = await jsonFunction();
 /** Différents tableaux dont on a besoin */
 /** Tableau Pat Patrouille */
 const tabPatPatrouille = data.patPatrouille;
@@ -51,22 +57,22 @@ const buttonPerso = document.getElementById("button_perso");
 const title = document.querySelector(".title2");
 
 /** Permet d'afficher le thème par défaut */
-let persoAAfficher  = tabPatPatrouille; 
-if(title) {
+let persoAAfficher = tabPatPatrouille;
+if (title) {
   title.textContent = `Pat Patrouille`;
 }
-if(persoContainer) {
+if (persoContainer) {
   /** On vide persoContainer au cas où */
   persoContainer.innerHTML = "";
 }
 /** On fait la fonction pour afficher les 8 premiers éléments */
-createPersonnages(persoAAfficher , 0, 8);
+createPersonnages(persoAAfficher, 0, 8);
 /** Et ici, c'est s'il y a le bouton */
-if(buttonPerso) {
+if (buttonPerso) {
   buttonPerso.addEventListener("click", () => {
-    createPersonnages(persoAAfficher , 8, 18);
+    createPersonnages(persoAAfficher, 8, 18);
     buttonPerso.classList.add("active");
-  })
+  });
 }
 
 /** On met numero = 1 car image Patpatrouille commence à 1 (dora avant) */
@@ -103,19 +109,18 @@ function refreshCarousel(direction) {
   const indices = [previousIndex, numero, nextIndex];
 
   imagesSliderDOM.forEach((element, index) => {
-    element.src = sliderImage[indices[index]];
-    element.alt = sliderText[indices[index]];
-    element.id = sliderId[indices[index]];
+    element.src = sliderImage[indices[index]]; //slider[indices[index]].url
+    element.alt = sliderText[indices[index]]; //slider[indices[index]].txt
+    element.id = sliderId[indices[index]]; //slider[indices[index]].id
   });
 
-    /** On choisit les perso à afficher */ 
-    persoAAfficher = tabThemeAll[numero];
-    // On vide le container
-    persoContainer.innerHTML = "";
-    title.innerHTML = "";
-    title.textContent = tabTitlePerso[numero]; 
-    buttonPerso.classList.remove("active");
-    // On crée une carte pour chaque perso
-    createPersonnages(persoAAfficher, 0, 8);
-
+  /** On choisit les perso à afficher */
+  persoAAfficher = tabThemeAll[numero];
+  // On vide le container
+  persoContainer.innerHTML = "";
+  title.innerHTML = "";
+  title.textContent = tabTitlePerso[numero];
+  buttonPerso.classList.remove("active");
+  // On crée une carte pour chaque perso
+  createPersonnages(persoAAfficher, 0, 8);
 }

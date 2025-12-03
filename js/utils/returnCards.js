@@ -18,13 +18,13 @@ export function returnCards() {
   /**  On déclare si carte trouvé */
   let isCardValid = 0;
   /** On va définir le thème */
-  let theme = localStorage.getItem("backgroundId"); 
+  let theme = localStorage.getItem("backgroundId");
   /** Récupération du score de Dora */
-  let scoreDora = localStorage.getItem("scoreDora") 
+  let scoreDora = localStorage.getItem("scoreDora");
   /** Récupération du score de patPatrouille */
   let scorePatPatrouille = localStorage.getItem("scorePatrouille");
   /** Récupération du score de Dino */
-  let scoreDino = localStorage.getItem("scoreDino");  
+  let scoreDino = localStorage.getItem("scoreDino");
 
   function flipCard(element) {
     /** lockBoard return, on sort du jeu */
@@ -52,24 +52,24 @@ export function returnCards() {
       /** On rajoute +1 au nombre de paire trouvée */
       isCardValid++;
 
-        /** On va lancer les différents sons par thème */
-        /** Si thème Dora */
-        if(theme === "img1") {
-          startPlaySound("/sounds/dora_sound.wav");
-        }
+      /** On va lancer les différents sons par thème */
+      /** Si thème Dora */
+      if (theme === "img1") {
+        startPlaySound("/sounds/dora_sound.wav");
+      }
 
-        /** Si thème Pat Patrouille */
-        if(theme === "img2") {
-          startPlaySound("/sounds/patPatrouille_sound.wav");
-        }
+      /** Si thème Pat Patrouille */
+      if (theme === "img2") {
+        startPlaySound("/sounds/patPatrouille_sound.wav");
+      }
 
-        /** Si thème Dinosaures */
-        if(theme === "img3") {
-          startPlaySound("/sounds/dino_sound.mp3");
-        }
+      /** Si thème Dinosaures */
+      if (theme === "img3") {
+        startPlaySound("/sounds/dino_sound.mp3");
+      }
 
       /** Quand le nombre de cartes trouvées = nombre de cartes existantes / 2 */
-      if(isCardValid === ((cardBlock.length) / 2)) {
+      if (isCardValid === cardBlock.length / 2) {
         /** On va flouter les cards */
         const cardBlock = document.querySelector(".card");
         cardBlock.classList.add("finish");
@@ -84,7 +84,7 @@ export function returnCards() {
         stopTimer();
 
         /** Si thème = Dora */
-        if(theme === "img1") {
+        if (theme === "img1") {
           /** On va ajouter une image en fonction du texte */
           const img = document.createElement("img");
           img.src = `/images/cards/dora/dora.png`;
@@ -94,13 +94,13 @@ export function returnCards() {
           text.textContent = `Tu viens de remporter une partie🏆​ !!!`;
 
           const text2 = document.createElement("p");
-          text2.textContent = `Tu es une(e) véritable champio(ne) 🌟​.`;
+          text2.textContent = `Tu es une(e) véritable champion(ne) 🌟​.`;
           textFinish.append(img, text, text2);
 
           /** Partie gagnées +1 */
           isWin++;
           /** S'il y a déjà un nombre enregistré en localstorage pour ce thème */
-          if(scoreDora) {
+          if (scoreDora) {
             /** On reprend ce nombre et on rajoute +1 */
             scoreDora = localStorage.getItem("scoreDora") + isWin++;
           }
@@ -109,7 +109,7 @@ export function returnCards() {
         }
 
         /** Si theme = pat Patrouille */
-        if(theme === "img2") {
+        if (theme === "img2") {
           /** On va ajouter une image en fonction du texte */
           const img = document.createElement("img");
           img.src = `/images/cards/patPatrouille/chase.png`;
@@ -117,41 +117,42 @@ export function returnCards() {
 
           const text = document.createElement("p");
           text.textContent = `Tu viens de remporter une partie🏆​ !!!`;
-          
+
           const text2 = document.createElement("p");
-          text2.textContent = `Tu es une(e) véritable champio(ne) 🌟​.`;
+          text2.textContent = `Tu es une(e) véritable champion(ne) 🌟​.`;
 
           textFinish.append(img, text, text2);
 
           /** Partie gagnées +1 */
           isWin++;
           /** S'il y a déjà un nombre enregistré en localstorage pour ce thème */
-          if(scorePatPatrouille) {
+          if (scorePatPatrouille) {
             /** On reprend ce nombre et on rajoute +1 */
-            scorePatPatrouille = localStorage.getItem("scorePatrouille") + isWin++;
+            scorePatPatrouille =
+              localStorage.getItem("scorePatrouille") + isWin++;
           }
           /** Et on envoie la nouvelle valeur */
           scorePatPatrouille = localStorage.setItem("scorePatrouille", isWin);
         }
 
         /** Si thème est Dinosaures */
-        if(theme === "img3") {
+        if (theme === "img3") {
           /** On va ajouter une image en fonction du texte */
           const img = document.createElement("img");
-          img.src = `/images/cards/patPatrouille/triceratops.png`;
+          img.src = `/images/cards/dinosaures/triceratops.png`;
           img.alt = `Image d'un triceratops.`;
-          
+
           const text = document.createElement("p");
           text.textContent = `Tu viens de remporter une partie🏆​ !!!`;
 
           const text2 = document.createElement("p");
-          text2.textContent = `Tu es une(e) véritable champio(ne) 🌟​.`;
+          text2.textContent = `Tu es une(e) véritable champion(ne) 🌟​.`;
           textFinish.append(img, text, text2);
 
           /** Partie gagnées +1 */
           isWin++;
           /** S'il y a déjà un nombre enregistré en localstorage pour ce thème */
-          if(scoreDino) {
+          if (scoreDino) {
             /** On reprend ce nombre et on rajoute +1 */
             scoreDino = localStorage.getItem("scoreDino") + isWin++;
           }
@@ -165,7 +166,6 @@ export function returnCards() {
       }
 
       resetCards();
-      
     } else {
       /** timeout permet de pouvoir voir la 2eme carte après le clic,
        * Au sinon classe est remove direct
@@ -179,7 +179,7 @@ export function returnCards() {
     }
   }
 
-  cardBlock.forEach(card => {
+  cardBlock.forEach((card) => {
     card.classList.add("active");
     card.addEventListener("click", () => flipCard(card));
   });
@@ -190,6 +190,3 @@ export function returnCards() {
     lockGame = false;
   }
 }
-
-
-

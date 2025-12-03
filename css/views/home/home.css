@@ -67,7 +67,7 @@
     max-width: var(--width_full);
     font-family: var(--font_secondary);
     color: var(--color_primary);
-    padding: var(--padding_xxxl) 0;
+    padding: var(--padding_xxxl) var(--padding_md);
 
     .home_description--text {
       font-size: var(--fontSize_reg);

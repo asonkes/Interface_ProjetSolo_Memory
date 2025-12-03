@@ -16,49 +16,67 @@ export function contact() {
   /** On va vider les input d'abord */
   let isValid = true;
 
-  /** Quand */
   /** On met 'async' pour faire fonctionner le 'await' */
   if(form) {
     form.addEventListener("submit", async (event) => {
     event.preventDefault();
 
     /** Ici si l'input n'est plus vide... */
+    //let errors = document.querySelectorAll('.error')
+
     if (input_name.value != "") {
       let errorName = document.querySelector(".errorName");
-      if(errorName) {
+      if (errorName) {
         errorName.remove();
       }
     }
 
     if (input_lastName.value != "") {
       let errorLastname = document.querySelector(".errorLastname");
-      if(errorLastname) {
+      if (errorLastname) {
         errorLastname.remove();
       }
     }
 
     if (input_email.value != "") {
       let errorEmail = document.querySelector(".errorEmail");
-      if(errorEmail) {
+      if (errorEmail) {
         errorEmail.remove();
       }
     }
 
     if (input_password.value != "") {
       let errorPassword = document.querySelector(".errorPassword");
-      if(errorPassword) {
+      if (errorPassword) {
         errorPassword.remove();
       }
     }
 
     if (textarea_message.value != "") {
       let errorTextarea = document.querySelector(".errorTextarea");
-      if(errorTextarea) {
+      if (errorTextarea) {
         errorTextarea.remove();
       }
     }
 
+    if (textarea_message.value != "") {
+      let errorMessage = document.querySelector(".errorMessage");
+      if (errorMessage) {
+        errorMessage.remove();
+      }
+    }
+
     /** Ici on va vérifier si les champs sont vides et ajouter le message d'erreur */
+    // let inputs = document.querySelectorAll('input')
+    // pour chaque input s'il est vide créer span et ajouter
+    // errors = {
+    //     "name" : {
+    //           "class" : "errorName",
+    //           "text" : "Votre nom est manquant !"
+    //      },
+    //      "lastname" : pareil
+    // }
+
     if (input_name.value === "") {
       isValid = false;
 
@@ -125,7 +143,7 @@ export function contact() {
     let errorMessage = document.querySelector(".errorMessage");
     if (textarea_message.value.length > 255) {
       errorMessage.remove();
-      
+
       isValid = false;
 
       let errorTextarea = document.querySelector(".errorTextarea");
@@ -144,12 +162,12 @@ export function contact() {
     if (isValid) {
       /** On va récupérer les données de mon formulaires, les mettre dans un objet JS */
       const data = {
-        name : input_name.value,
-        lastname : input_lastName.value,
-        email : input_email.value,
-        password : input_password.value,
-        message : textarea_message.value
-      }
+        name: input_name.value,
+        lastname: input_lastName.value,
+        email: input_email.value,
+        password: input_password.value,
+        message: textarea_message.value,
+      };
 
       /** Mais pour pouvoir envoyer ses données au serveur, il faut les transformer en json */
       await contactInformations(data); // <-- on envoie les données ici

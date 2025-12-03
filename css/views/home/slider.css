@@ -21,6 +21,7 @@
   max-width: var(--width_full);
   padding: var(--padding_xxl) 0;
   gap: 1rem;
+  overflow: hidden;
 
   @media (max-width: 680px) {
     gap: 0.5rem;
