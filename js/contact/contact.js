@@ -18,7 +18,8 @@ export function contact() {
 
   /** Quand */
   /** On met 'async' pour faire fonctionner le 'await' */
-  form.addEventListener("submit", async (event) => {
+  if(form) {
+    form.addEventListener("submit", async (event) => {
     event.preventDefault();
 
     /** Ici si l'input n'est plus vide... */
@@ -159,6 +160,7 @@ export function contact() {
       console.log("Message envoyé !");
     }
   });
+  }
 }
 
 contact();
