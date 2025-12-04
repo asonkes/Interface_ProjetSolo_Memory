@@ -39,6 +39,7 @@ function scores() {
   const buttonScore = document.getElementById("buttonScore");
 
   buttonScore.addEventListener("click", () => {
+    /** On vide le localStorage */
     localStorage.clear();
 
     /** On va créer un élément pour avertir que le localStrorage est bien réinitialisé */
@@ -50,6 +51,14 @@ function scores() {
       warning_text.textContent = `Vos scores ont bien été réinitialisé !!!`;
       buttonScore.insertAdjacentElement("beforebegin", warning_text);
     }
+
+    /** On va vider les points des spans */
+    const spanScores = document.querySelectorAll(".scores");
+    console.log(spanScores);
+
+    spanScores.forEach((element) => {
+      element.textContent = `0`;
+    });
   });
 }
 
